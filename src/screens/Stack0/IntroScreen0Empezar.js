@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { useNavigation } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { View, Text, ImageBackground, StyleSheet,Button, Image, TouchableOpacity, Dimensions} from 'react-native'
 import svg,{Path, Svg} from 'react-native-svg';
 
@@ -8,6 +8,7 @@ import svg,{Path, Svg} from 'react-native-svg';
 export const IntroScreen0Empezar = () => {
     const navigation=useNavigation();
     return (
+      //<NavigationContainer>
         <View style={styles.containerPapa}>
             <Image
                 style={styles.logo}
@@ -63,6 +64,7 @@ export const IntroScreen0Empezar = () => {
             </View>
                 
     </View>
+    //</NavigationContainer>
   );
 }
 

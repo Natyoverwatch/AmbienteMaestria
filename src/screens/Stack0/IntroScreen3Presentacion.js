@@ -25,7 +25,7 @@ const IntroScreen3Presentacion = ({navigation}) => {
       </SafeAreaView>
       <TouchableOpacity  
           style={styles.button}
-          onPress={()=> navigation.navigate("Inicio1")}>
+          onPress={()=> navigation.navigate("Intro5")}>
           <Text style={styles.text2}>Empeza la aventura</Text>
       </TouchableOpacity>
     </View>

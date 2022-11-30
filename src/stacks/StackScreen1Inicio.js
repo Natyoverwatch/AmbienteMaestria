@@ -1,25 +1,13 @@
 import React from 'react'
 import { View, Text, Image } from 'react-native'
-
+import { createStackNavigator } from '@react-navigation/stack';
 import InicioScreen0Modulos from '../screens/Stack1/InicioScreen0Modulos';
-import InicioScreen1Leccciones from '../screens/Stack1/InicioScreen1Leccciones';
+import InicioScreen1Leccciones from '../screens/Stack1/Lecciones/InicioScreen1Leccciones';
 import InicioScreen2Explicacion from '../screens/Stack1/InicioScreen2Explicacion';
 import InicioScreen3Ejercicio from '../screens/Stack1/InicioScreen3Ejercicio';
 import InicioScreen4Codigo from '../screens/Stack1/InicioScreen4Codigo';
 import InicioScreen5Terminal from '../screens/Stack1/InicioScreen5Terminal';
 import InicioScreen6Siguiente from '../screens/Stack1/InicioScreen6Siguiente';
-import {IntroScreen0Empezar} from '../screens/Stack0/IntroScreen0Empezar';
-import {IntroScreen1Ingresar} from '../screens/Stack0/IntroScreen1Ingresar';
-import {IntroScreen2Registrarse} from '../screens/Stack0/IntroScreen2Registrarse';
-import IntroScreen3Presentacion from '../screens/Stack0/IntroScreen3Presentacion';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import StackScreen2Retos from './StackScreen2Retos';
-import StackScreen3Progreso from './StackScreen3Progreso';
-import StackScreen4Calendario from './StackScreen4Calendario';
-import StackScreen5Perfi from './StackScreen5Perfil';
-import { Ionicons, AntDesign, MaterialCommunityIcons,Foundation,FontAwesome5   } from "@expo/vector-icons";
 
 const FondoHeader = () => (
   <Image
@@ -50,155 +38,13 @@ const BackImage2 = () => (
     />
   );
 
-function HomeStack() {
-    const Tab = createBottomTabNavigator();
-    return (
-        <Tab.Navigator 
-            screenOptions={{
-                tabBarInactiveBackgroundColor:'#1F646D',
-                tabBarActiveBackgroundColor: "#CCCECE",
-                tabBarShowLabel:false,
-          }}>
-        <Tab.Screen name="InicioMenu" component={InicioScreen0Modulos} 
-        options={{
-            tabBarIcon: (tabInfo) => {
-                return (
-                <Ionicons
-                    name="md-home"
-                    size={24}
-                    color={tabInfo.focused ? "#1F646D" : "#ffffff"}
-                />
-                )}
-        }}/>
-        <Tab.Screen name="RetosMenu" component={StackScreen2Retos}
-         options={{
-            tabBarIcon: (tabInfo) => {
-                return (
-                <FontAwesome5 
-                    name="flag-checkered"
-                    size={24}
-                    color={tabInfo.focused ? "#1F646D" : "#ffffff"}
-                />
-                )}
-        }}/>
-        <Tab.Screen name="ProgresoMenu" component={StackScreen3Progreso}
-         options={{
-            tabBarIcon: (tabInfo) => {
-                return (
-                <MaterialCommunityIcons
-                    name="progress-star"
-                    size={24}
-                    color={tabInfo.focused ? "#1F646D" : "#ffffff"}
-                />
-                )}
-        }}/>
-        <Tab.Screen name="CalendarioMenu" component={StackScreen4Calendario}
-         options={{
-            tabBarIcon: (tabInfo) => {
-                return (
-                <Foundation 
-                    name="calendar"
-                    size={24}
-                    color={tabInfo.focused ? "#1F646D" : "#ffffff"}
-                />
-                )}
-        }}/>
-        <Tab.Screen name="PerfilMenu" component={StackScreen5Perfi}
-         options={{
-            tabBarIcon: (tabInfo) => {
-                return (
-                <Ionicons
-                    name="md-person-circle-outline"
-                    size={24}
-                    color={tabInfo.focused ? "#1F646D" : "#ffffff"}
-                />
-                )}
-        }}/>
-    </Tab.Navigator>
-    );
-  }
-
-
-
-export const IntroScreen1Inicio = () => {
+export const StackScreen1Inicio = () => {
   const IntoStack = createStackNavigator();
     return (
-        <NavigationContainer>
         <IntoStack.Navigator>
             <IntoStack.Screen 
-                name="Intro1" 
-                component={IntroScreen0Empezar}
-                options={{
-                    title:false,
-                    headerStyle: {
-                        backgroundColor: '#1F646D',
-                        shadowColor:'transparent',
-                    },
-                }}
-                />
-            <IntoStack.Screen 
-                name="Intro2" 
-                component={IntroScreen1Ingresar}
-                options={{
-                    title:"Ingresar",
-                    headerTitleStyle: {
-                      fontWeight: 'bold',
-                      color:'#ffffff',
-                      fontSize:25,
-                      marginLeft:-30,
-                    },
-                    headerTransparent: true,
-                    headerBackImage: BackImage,
-                    headerStyle: {
-                        backgroundColor: 'transparent',
-                        shadowColor: 'transparent',
-                        
-                    },
-                    headerBackground:FondoHeader,
-                    }}/>
-            <IntoStack.Screen 
-                name="Intro3" 
-                component={IntroScreen2Registrarse}
-                options={{
-                    title:"Ingresar",
-                    headerTitleStyle: {
-                      fontWeight: 'bold',
-                      color:'#ffffff',
-                      fontSize:25,
-                      marginLeft:-30,
-                    },
-                    headerTransparent: true,
-                    headerBackImage: BackImage,
-                    headerStyle: {
-                        backgroundColor: 'transparent',
-                        shadowColor: 'transparent',
-                        
-                    },
-                    headerBackground:FondoHeader,
-                    }}/>
-            <IntoStack.Screen 
-                name="Intro4" 
-                component={IntroScreen3Presentacion}
-                options={{
-                    title:"Bienvenid@",
-                    headerTitleStyle: {
-                      fontWeight: 'bold',
-                      color:'#1F646D',
-                      fontSize:25,
-                      marginLeft:-10,
-                    },
-                    headerTransparent: true,
-                    headerBackImage: BackImage2,
-                    headerStyle: {
-                        backgroundColor: 'transparent',
-                        shadowColor: 'transparent',
-                        
-                    },
-                    headerBackground:FondoHeader2,
-                    }}/>
-            <IntoStack.Screen 
                 name="Inicio1" 
-                component={HomeStack} 
+                component={InicioScreen0Modulos} 
                 options={{
                     headerShown: false,
                 }}/>
@@ -206,10 +52,12 @@ export const IntroScreen1Inicio = () => {
                 name="Inicio2" 
                 component={InicioScreen1Leccciones}
                 options={{
-                    title:"Ingresar",
+                    title:"Lecciones",
                     headerTitleStyle: {
                       fontWeight: 'bold',
                       color:'#ffffff',
+                      fontSize:25,
+                      marginLeft:-30,
                     },
                     headerTransparent: true,
                     headerBackImage: BackImage,
@@ -291,6 +139,5 @@ export const IntroScreen1Inicio = () => {
                     },
                     }}/>
         </IntoStack.Navigator>
-        </NavigationContainer>
     );
 }

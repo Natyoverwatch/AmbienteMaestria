@@ -1,13 +1,11 @@
-import { View, Text,StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native'
+import { StyleSheet, Text, View,ImageBackground,Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { useNavigation } from '@react-navigation/native';
-
 import * as Progress from 'react-native-progress';
 
 const persons = [
   {
 	id: 1,
-	name: "Modulo 1",
+	name: "Earnest Green",
   color: "#1F646D",
   sentido: "right",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
@@ -16,7 +14,7 @@ const persons = [
   },
   {
 	id: 2,
-	name: "Modulo 2",
+	name: "Winston Orn",
   color: "#FFFFFF",
   sentido: "left",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
@@ -25,7 +23,7 @@ const persons = [
   },
   {
 	id: 3,
-	name: "Modulo 3",
+	name: "Carlton Collins",
   sentido: "right",
   color: "#1F646D",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
@@ -102,89 +100,44 @@ function Orderlecciones() {
     </View>
   );}
 
-const InicioScreen0Modulos = () => {
-  const navigation=useNavigation();
-  return (
-    <View>
-      <TouchableOpacity  
-                    style={styles.button}
-                    onPress={()=> navigation.navigate("Inicio2")}>
-                    <Text style={styles.text2}>Empecemos</Text>
-                </TouchableOpacity>
-      <Text>InicioScreen0Modulos</Text>
-      <TouchableOpacity style={[styles.leccontainer,]}>
-              
-                <View style={[styles.box1, {  }]}>
-                <Image
-                    source={require("../../../imagenes/pythontemplate.png")}
-                    style={{width: '100%', height: '100%'}}
-                  />
-                </View>
-                <View style={[styles.box2, {  }]}>
-                <Image
-                    source={require("../../../imagenes/pythontemplate.png")}
-                    style={{width: '100%', height: '100%'}}
-                  />
-                </View>
-                
-                
-              
-            </TouchableOpacity>
-</View>
-  )
+const InicioScreen1Leccciones2 = () => {
+  return (  
+    <View style={styles.container}>
+        <View style={styles.containerprogressbar}>
+        <Progress.Bar progress={.4} style={styles.progress} width={280}  color="#10E6DE" />
+        </View>
+        <Orderlecciones />
+    </View>
+    
+      );
 }
 
+
 const styles = StyleSheet.create({
-  containerPapa: {
-      //paddingTop:15,
-      height:'100%',
-      width:'100%',
-      backgroundColor:'#1F646D',
-      alignItems:'center',
-    },
-  
-  button: {
-      marginTop:'10%',
-      borderRadius: 20,
-      borderWidth: 6,
-      borderColor: "#315259",
-      width: '70%',
-      height: '40%',
-      backgroundColor:'#FFFFFF',
-      alignItems:'center',
-      textAlignVertical:'center',
-      justifyContent: 'center',
+  container: {
+    flex: 1,
+    alignItems:"center",
+    paddingTop:'8%',
   },
   leccontainer: {
-    backgroundColor:"#14C463",
+    //backgroundColor:"yellow",
     width:370,
     height:150,
     marginTop:35,
     borderRadius:40,
     alignItems:"center",
+    padding:5,
     justifyContent: 'center',
-    flexDirection: "row",
   },  
   //Cuadrar boxes
   box1: {
-    backgroundColor:'#A70B0B',
-    width: '45%',
-    height: '90%',
-    //marginLeft:'2.5%',
+    width: 80,
+    height: 80,
     borderRadius:10,
-    //borderColor:"#ffffff",
+    borderColor:"#ffffff",
     borderWidth:2, 
   },
   box2: {
-    backgroundColor:'#A70B0B',
-    width: '45%',
-    height: '90%',
-    borderRadius:10,
-    marginLeft:'2.5%',
-    //borderColor:"#ffffff",
-    borderWidth:2, 
-  },
-  box3: {
     width: 150,
     height: 80,
     marginLeft:5, 
@@ -192,13 +145,16 @@ const styles = StyleSheet.create({
     alignItems:"center",
     justifyContent: 'center',
   },
+  box3: {
+    width: 80,
+    height: 80,
+    marginLeft:5,
+ 
+  },
   row: {
-    backgroundColor:'#3220CC',
-    //marginTop:0,
+    marginTop:0,
     flexDirection: "row",
     flexWrap: "wrap",
-    alignItems:"center",
-    justifyContent: 'center',
   },
   image: {
     flex: 1,
@@ -215,6 +171,6 @@ const styles = StyleSheet.create({
     backgroundColor:"white",
     borderColor:"#fff",
   },
-})
+});
 
-export default InicioScreen0Modulos
+export default InicioScreen1Leccciones2
