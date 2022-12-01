@@ -1,6 +1,7 @@
 import { View, Text,StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const persons = [
@@ -111,21 +112,47 @@ const InicioScreen0Modulos = () => {
                     <Text style={styles.text2}>Empecemos</Text>
                 </TouchableOpacity>
       <Text>InicioScreen0Modulos</Text>
-      <TouchableOpacity style={[styles.leccontainer,]}>
+      <View style={[styles.leccontainer,]}>
+                <TouchableOpacity style={[styles.box1, {  }]}>
+                  <View style={[styles.box1imagen, {  }]}>
+                  <Image
+                    source={require("../../../imagenes/pythontemplate.png")}
+                    style={{width: '100%', height: '100%'}}
+                  />
+                  </View>
+                </TouchableOpacity>
+                <View style={[styles.box2, { justifyContent:'flex-end', }]}>
+                <Image
+                    source={require("../../../imagenes/flecha.png")}
+                    style={{width: '60%', height: '60%'}}
+                  />
+                </View>
+      </View>
+      <Image
+          source={require("../../../imagenes/numeroM1.png")}
+          style={{width: '22%', height: '12%', marginTop:'-48%', marginLeft:'-70%', marginBottom:'20%'}}
+        />
+      <View style={[styles.leccontainer,]}>
               
-                <View style={[styles.box1, {  }]}>
+              <View style={[styles.box2, { justifyContent:'flex-end', alignItems:'flex-end' }]}>
+              <Image
+                  source={require("../../../imagenes/flecha2.png")}
+                  style={{width: '60%', height: '60%'}}
+                />
+              </View>
+              <TouchableOpacity style={[styles.box1, {  }]}>
+                <View style={[styles.box1imagen, {  }]}>
                 <Image
-                    source={require("../../../imagenes/pythontemplate.png")}
-                    style={{width: '100%', height: '100%'}}
-                  />
+                  source={require("../../../imagenes/pythontemplate.png")}
+                  style={{width: '100%', height: '100%'}}
+                />
                 </View>
-                <View style={[styles.box2, {  }]}>
-                <Image
-                    source={require("../../../imagenes/pythontemplate.png")}
-                    style={{width: '100%', height: '100%'}}
-                  />
-                </View>
-            </TouchableOpacity>
+              </TouchableOpacity>
+    </View>
+    <Image
+        source={require("../../../imagenes/numeroM1.png")}
+        style={{width: '22%', height: '12%', marginTop:'-48%', marginLeft:'70%'}}
+      />
 </View>
   )
 }
@@ -153,7 +180,7 @@ const styles = StyleSheet.create({
   },
   leccontainer: {
     backgroundColor:"#14C463",
-    width:370,
+    width:350,
     height:150,
     marginTop:35,
     borderRadius:40,
@@ -164,37 +191,30 @@ const styles = StyleSheet.create({
   //Cuadrar boxes
   box1: {
     backgroundColor:'#A70B0B',
-    width: '45%',
-    height: '90%',
-    //marginLeft:'2.5%',
+    width: '40%',
+    height: '80%',
+    marginHorizontal:'1.5%',
     borderRadius:10,
     //borderColor:"#ffffff",
+    borderWidth:2, 
+    alignItems:'center',
+    justifyContent: 'center',
+  },
+  box1imagen: {
+    backgroundColor:'#944040',
+    width: '80%',
+    height: '80%',
+    borderRadius:10,
     borderWidth:2, 
   },
   box2: {
     backgroundColor:'#A70B0B',
-    width: '45%',
-    height: '90%',
+    width: '40%',
+    height: '80%',
     borderRadius:10,
-    marginLeft:'2.5%',
+    marginHorizontal:'1.5%',
     //borderColor:"#ffffff",
     borderWidth:2, 
-  },
-  box3: {
-    width: 150,
-    height: 80,
-    marginLeft:5, 
-    padding:3,
-    alignItems:"center",
-    justifyContent: 'center',
-  },
-  row: {
-    backgroundColor:'#3220CC',
-    //marginTop:0,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignItems:"center",
-    justifyContent: 'center',
   },
   image: {
     flex: 1,
