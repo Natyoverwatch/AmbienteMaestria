@@ -7,15 +7,12 @@ import { firebaseConfig } from '../../../firebase-config';
 import { getDatabase, ref, onValue} from "firebase/database";
 
 
-
-const PerfilScreen0 = () => {
-  //console.log(global.iduser)
-
+function userdata(){
   const app=initializeApp(firebaseConfig);
   const auth=getAuth(app);
   const [todos, setTodos] = useState({});
   const db=getDatabase(app);
-  
+
   useEffect(() => {
     return onValue(ref(db, '/users/'+global.iduser), querySnapShot => {
       let data = querySnapShot.val() || {};
@@ -24,17 +21,20 @@ const PerfilScreen0 = () => {
     });
   }, []);
   
-  {Object.keys(todos).map((keyName, i) => (
-      //console.log("Key:"+{i}+" Name:"+{todos[keyName]})
-      console.log(todos[keyName])
-      //todos[keyName].email==correo ? console.log("Correo iguales") : console.log("No usuario")
-      
-    ))}
+  return todos
+ 
+}
 
-
+const PerfilScreen0 = () => {
+  let userinfo='';
+  if(global.iduser!='') userinfo=userdata();
+    //console.log(userinfo);
   return (
     <View>
-      <Text>PerfilScreen0</Text>
+      <Text>{userinfo.username}</Text>
+      <Text>{userinfo.curse}</Text>
+      <Text>{userinfo.email}</Text>
+      
     </View>
   )
 }
