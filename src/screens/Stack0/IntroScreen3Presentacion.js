@@ -24,7 +24,7 @@ const IntroScreen3Presentacion = ({navigation}) => {
   }, []);
   
   {Object.keys(todos).map((keyName, i) => (
-      todos[keyName].email===global.correouser ? global.iduser=todos[keyName].id : console.log("No usuarioo")
+      todos[keyName].email===global.correouser ? global.iduser=todos[keyName].id : console.log("No usuario")
     ))}
 
     
