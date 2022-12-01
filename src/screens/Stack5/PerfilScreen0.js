@@ -6,8 +6,6 @@ import {initializeApp} from 'firebase/app';
 import { firebaseConfig } from '../../../firebase-config';
 import { getDatabase, ref, onValue} from "firebase/database";
 
-
-
 function userdata(){
   const app=initializeApp(firebaseConfig);
   const auth=getAuth(app);
