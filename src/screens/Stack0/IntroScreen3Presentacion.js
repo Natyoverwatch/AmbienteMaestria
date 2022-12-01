@@ -1,11 +1,33 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { View, Text, ImageBackground, StyleSheet,Button, Image, TouchableOpacity, Dimensions, SafeAreaView } from 'react-native'
-
+import { getDatabase, ref, onValue} from "firebase/database";
+import {getAuth,signInWithEmailAndPassword} from 'firebase/auth';
+import {initializeApp} from 'firebase/app';
+import { firebaseConfig } from '../../../firebase-config';
 
 const yourPicture = require('../../../imagenes/DivIntro4.png');
 
 const IntroScreen3Presentacion = ({navigation}) => {
+  //console.log()
 
+  const [todos, setTodos] = useState({});
+  const app=initializeApp(firebaseConfig);
+  const auth=getAuth(app);
+  const db=getDatabase(app);
+
+  useEffect(() => {
+    return onValue(ref(db, '/users'), querySnapShot => {
+      let data = querySnapShot.val() || {};
+      let todoItems = {...data};
+      setTodos(todoItems);
+    });
+  }, []);
+  
+  {Object.keys(todos).map((keyName, i) => (
+      todos[keyName].email===global.correouser ? global.iduser=todos[keyName].id : console.log("No usuario")
+    ))}
+
+    
   return (
     <View style={styles.containerPapa}>
       <Image

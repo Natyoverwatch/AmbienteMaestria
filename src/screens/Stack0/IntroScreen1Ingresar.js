@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { StyleSheet, Text, View, ImageBackground,TextInput, TouchableOpacity,Image,Alert, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import svg,{Path, Svg} from 'react-native-svg'
@@ -7,13 +7,14 @@ import {getAuth,signInWithEmailAndPassword} from 'firebase/auth';
 import {initializeApp} from 'firebase/app';
 import { firebaseConfig } from '../../../firebase-config';
 
+
 function LoginScreen(){
   const [correo, setCorreo] = React.useState('');
   const [contra, setContra] = React.useState('');
-
+  
   const app=initializeApp(firebaseConfig);
   const auth=getAuth(app);
-
+  
   const handleSignIn = () => {
     signInWithEmailAndPassword(auth,correo,contra)
     .then((userCredential)=>{
@@ -21,6 +22,7 @@ function LoginScreen(){
       const user = userCredential.user
       console.log(user)
       navigation.navigate('Intro4');
+      global.correouser=correo;
     })
     .catch(error => {
       console.log(error)

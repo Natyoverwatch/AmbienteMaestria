@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View,ImageBackground,Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import * as Progress from 'react-native-progress';
+
 
 const persons = [
   {
@@ -103,9 +103,6 @@ function Orderlecciones() {
 const InicioScreen1Leccciones = () => {
   return (  
     <View style={styles.container}>
-        <View style={styles.containerprogressbar}>
-        <Progress.Bar progress={.4} style={styles.progress} width={280}  color="#10E6DE" />
-        </View>
         <Orderlecciones />
     </View>
     

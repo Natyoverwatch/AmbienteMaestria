@@ -2,7 +2,6 @@ import { View, Text,StyleSheet, Dimensions, TouchableOpacity, Image } from 'reac
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 
-import * as Progress from 'react-native-progress';
 
 const persons = [
   {
