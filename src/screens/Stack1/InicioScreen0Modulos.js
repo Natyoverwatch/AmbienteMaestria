@@ -56,7 +56,7 @@ const modulos = [
     sentido: "right",
     marginLeft:"70%",
     modulotitulo:"Estructuras de datos",
-    ruta:"Inicio2.3",
+    ruta:"Inicio2.4",
     imagenmodulo:require("../../../imagenes/imagenM4.png"),
     imagenflecha:require("../../../imagenes/fondonada.png"),
     imagennumero: require("../../../imagenes/numeroM4.png"),
@@ -91,7 +91,9 @@ function Modulosorden() {
                   />
                 </View>
               </View>
-              <TouchableOpacity style={[styles.boxnumerotouch, { marginLeft: modulo.marginLeft, }]}>
+              <TouchableOpacity 
+              style={[styles.boxnumerotouch, { marginLeft: modulo.marginLeft, }]}
+              onPress={()=> navigation.navigate(modulo.ruta)}>
                 <Image
                   source={modulo.imagennumero}
                   style={{width: '100%', height: '100%',}}
@@ -124,7 +126,7 @@ function Modulosorden() {
               </View>
               <TouchableOpacity  
                 style={[styles.boxnumerotouch, { marginLeft: modulo.marginLeft, }]}
-                onPress={()=> navigation.navigate("Inicio2")}>
+                onPress={()=> navigation.navigate(modulo.ruta)}>
                 <Image
                   source={modulo.imagennumero}
                   style={{width: '100%', height: '100%',}}
@@ -148,7 +150,7 @@ const InicioScreen0Modulos = () => {
       >
         <Text style={{fontWeight: 'bold',
                       color:'#ffffff',
-                      fontSize:25,
+                      fontSize:28,
                       marginLeft:'10%',
                       marginTop:'15%'}}>Sesiones</Text>
       </ImageBackground>

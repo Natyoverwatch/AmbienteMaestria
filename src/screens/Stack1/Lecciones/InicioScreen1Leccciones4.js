@@ -10,7 +10,7 @@ const persons = [
   sentido: "right",
   colorfont:"#ffffff",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../../imagenes/imagenL3.1.png"),
+  imageleccion:require("../../../../imagenes/imagenL4.1.png"),
   image: require("../../../../imagenes/numL1.png")
   },
   {
@@ -20,7 +20,7 @@ const persons = [
   sentido: "left",
   colorfont:"#000000",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../../imagenes/imagenL3.2.png"),
+  imageleccion:require("../../../../imagenes/imagenL4.2.png"),
   image: require("../../../../imagenes/numL2.png")
   },
   {
@@ -30,7 +30,7 @@ const persons = [
   color: "#1F646D",
   colorfont:"#ffffff",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../../imagenes/imagenL3.3.png"),
+  imageleccion:require("../../../../imagenes/imagenL4.3.png"),
   image: require("../../../../imagenes/numL3.png")
   },
   
@@ -103,7 +103,7 @@ function Orderlecciones() {
     </View>
   );}
 
-const InicioScreen1Leccciones3 = () => {
+const InicioScreen1Leccciones4 = () => {
   return (  
     <View style={styles.container}>
         <View style={styles.containerprogressbar}>
@@ -175,4 +175,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default InicioScreen1Leccciones3
+export default InicioScreen1Leccciones4

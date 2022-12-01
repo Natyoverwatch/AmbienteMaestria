@@ -10,6 +10,7 @@ import InicioScreen5Terminal from '../screens/Stack1/InicioScreen5Terminal';
 import InicioScreen6Siguiente from '../screens/Stack1/InicioScreen6Siguiente';
 import InicioScreen1Leccciones3 from '../screens/Stack1/Lecciones/InicioScreen1Leccciones3';
 import InicioScreen1Leccciones2 from '../screens/Stack1/Lecciones/InicioScreen1Leccciones2';
+import InicioScreen1Leccciones4 from '../screens/Stack1/Lecciones/InicioScreen1Leccciones4';
 
 const FondoHeader = () => (
   <Image
@@ -93,6 +94,26 @@ export const StackScreen1Inicio = () => {
             <IntoStack.Screen 
                 name="Inicio2.3" 
                 component={InicioScreen1Leccciones3}
+                options={{
+                    title:"Lecciones",
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      color:'#ffffff',
+                      fontSize:25,
+                      marginLeft:-30,
+                    },
+                    headerTransparent: true,
+                    headerBackImage: BackImage,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        shadowColor: 'transparent',
+                        
+                    },
+                    headerBackground:FondoHeader,
+                    }}/>
+            <IntoStack.Screen 
+                name="Inicio2.4" 
+                component={InicioScreen1Leccciones4}
                 options={{
                     title:"Lecciones",
                     headerTitleStyle: {

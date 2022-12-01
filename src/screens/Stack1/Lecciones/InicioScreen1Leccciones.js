@@ -8,27 +8,30 @@ const persons = [
 	name: "Earnest Green",
   color: "#1F646D",
   sentido: "right",
+  colorfont:"#ffffff",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../../imagenes/pythontemplate.png"),
-  image: require("../../../../imagenes/number1.png")
+  imageleccion:require("../../../../imagenes/imagenL1.1.png"),
+  image: require("../../../../imagenes/numL1.png")
   },
   {
 	id: 2,
 	name: "Winston Orn",
   color: "#FFFFFF",
   sentido: "left",
+  colorfont:"#000000",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../../imagenes/pythontemplate.png"),
-  image: require("../../../../imagenes/number1.png")
+  imageleccion:require("../../../../imagenes/imagenL1.2.jpg"),
+  image: require("../../../../imagenes/numL2.png")
   },
   {
 	id: 3,
 	name: "Carlton Collins",
   sentido: "right",
+  colorfont:"#ffffff",
   color: "#1F646D",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../../imagenes/pythontemplate.png"),
-  image: require("../../../../imagenes/number1.png")
+  imageleccion:require("../../../../imagenes/imagenL1.3.png"),
+  image: require("../../../../imagenes/numL3.png")
   },
   
 ];
@@ -46,19 +49,19 @@ function Orderlecciones() {
               onPress={()=> console.log("Touched!!")}
             >
               <View style={styles.row}>
-                <View style={[styles.box1, {  }]}>
+                <View style={[styles.box3, {  }]}>
                 <Image
                     source={person.image}
                     style={{width: '100%', height: '100%'}}
                   />
                 </View>
                 <View style={[styles.box2, {  }]}>
-                  <Text style={{textAlign:"center",fontSize:16}}>{person.lecciontext}</Text>
+                  <Text style={{textAlign:"center",fontSize:16, color: person.colorfont}}>{person.lecciontext}</Text>
                 </View>
-                <View style={[styles.box3, {  }]}>
+                <View style={[styles.box1, { borderColor:"#1F646D", }]}>
                   <Image 
                     source={person.imageleccion}
-                    style={{width: '100%', height: '100%'}}
+                    style={{width: '100%', height: '100%', borderRadius:8,}}
                   />
                 </View>
               </View>
@@ -74,14 +77,14 @@ function Orderlecciones() {
               onPress={()=> console.log("Touched!!")}
             > 
               <View style={styles.row}>
-                <View style={[styles.box1, {}]}>
+                <View style={[styles.box1, {borderColor:"#C5CACA",}]}>
                 <Image 
                     source={person.imageleccion}
-                    style={{width: '100%', height: '100%'}}
+                    style={{width: '100%', height: '100%', borderRadius:8,}}
                   />
                 </View>
                 <View style={[styles.box2, {}]}>
-                  <Text style={{textAlign:"center",fontSize:15}}>{person.lecciontext}</Text>
+                  <Text style={{textAlign:"center",fontSize:15, color: person.colorfont}}>{person.lecciontext}</Text>
                 </View>
                 <View style={[styles.box3, {}]}>
                 <Image
@@ -134,7 +137,6 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius:10,
-    borderColor:"#ffffff",
     borderWidth:2, 
   },
   box2: {
@@ -149,7 +151,6 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     marginLeft:5,
- 
   },
   row: {
     marginTop:0,
