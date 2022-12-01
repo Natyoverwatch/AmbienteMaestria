@@ -51,7 +51,7 @@ function HomeStack() {
   return (
       <Tab.Navigator 
           screenOptions={{
-              tabBarInactiveBackgroundColor:'#1F646D',
+              tabBarInactiveBackgroundColor:'#21828F',
               tabBarActiveBackgroundColor: "#CCCECE",
               tabBarShowLabel:false,
         }}>
@@ -63,7 +63,7 @@ function HomeStack() {
               <Ionicons
                   name="md-home"
                   size={24}
-                  color={tabInfo.focused ? "#1F646D" : "#ffffff"}
+                  color={tabInfo.focused ? "#21828F" : "#ffffff"}
               />
               )}
       }}/>
@@ -75,7 +75,7 @@ function HomeStack() {
               <FontAwesome5 
                   name="flag-checkered"
                   size={24}
-                  color={tabInfo.focused ? "#1F646D" : "#ffffff"}
+                  color={tabInfo.focused ? "#21828F" : "#ffffff"}
               />
               )}
       }}/>
@@ -87,7 +87,7 @@ function HomeStack() {
               <MaterialCommunityIcons
                   name="progress-star"
                   size={24}
-                  color={tabInfo.focused ? "#1F646D" : "#ffffff"}
+                  color={tabInfo.focused ? "#21828F" : "#ffffff"}
               />
               )}
       }}/>
@@ -99,7 +99,7 @@ function HomeStack() {
               <Foundation 
                   name="calendar"
                   size={24}
-                  color={tabInfo.focused ? "#1F646D" : "#ffffff"}
+                  color={tabInfo.focused ? "#21828F" : "#ffffff"}
               />
               )}
       }}/>
@@ -111,7 +111,7 @@ function HomeStack() {
               <Ionicons
                   name="md-person-circle-outline"
                   size={24}
-                  color={tabInfo.focused ? "#1F646D" : "#ffffff"}
+                  color={tabInfo.focused ? "#21828F" : "#ffffff"}
               />
               )}
       }}/>

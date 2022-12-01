@@ -4,10 +4,11 @@ import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-const persons = [
+const modulos = [
   {
 	id: 1,
 	name: "Modulo 1",
+  colorbordebox1:"",
   color: "#1F646D",
   sentido: "right",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
@@ -17,6 +18,7 @@ const persons = [
   {
 	id: 2,
 	name: "Modulo 2",
+  colorbordebox1:"",
   color: "#FFFFFF",
   sentido: "left",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
@@ -27,6 +29,7 @@ const persons = [
 	id: 3,
 	name: "Modulo 3",
   sentido: "right",
+  colorbordebox1:"",
   color: "#1F646D",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
   imageleccion:require("../../../imagenes/pythontemplate.png"),
@@ -39,27 +42,27 @@ function Orderlecciones() {
 
   return(
     <View>
-      {persons.map((person) => {
-        if(person.sentido=="left"){
+      {modulos.map((modulo) => {
+        if(modulo.sentido=="left"){
           return (
             <TouchableOpacity 
-              key={person.id} 
-              style={[styles.leccontainer,{backgroundColor: person.color,}]}
+              key={modulo.id} 
+              style={[styles.leccontainer,{backgroundColor: modulo.color,}]}
               onPress={()=> console.log("Touched!!")}
             >
               <View style={styles.row}>
                 <View style={[styles.box1, {  }]}>
                 <Image
-                    source={person.image}
+                    source={modulo.image}
                     style={{width: '100%', height: '100%'}}
                   />
                 </View>
                 <View style={[styles.box2, {  }]}>
-                  <Text style={{textAlign:"center",fontSize:16}}>{person.lecciontext}</Text>
+                  <Text style={{textAlign:"center",fontSize:16}}>{modulo.lecciontext}</Text>
                 </View>
                 <View style={[styles.box3, {  }]}>
                   <Image 
-                    source={person.imageleccion}
+                    source={modulo.imageleccion}
                     style={{width: '100%', height: '100%'}}
                   />
                 </View>
@@ -68,26 +71,26 @@ function Orderlecciones() {
             </TouchableOpacity>
   
           );
-        }else if(person.sentido=="right"){
+        }else if(modulo.sentido=="right"){
           return (
             <TouchableOpacity 
-              key={person.id} 
-              style={[styles.leccontainer,{backgroundColor: person.color,}]}
+              key={modulo.id} 
+              style={[styles.leccontainer,{backgroundColor: modulo.color,}]}
               onPress={()=> console.log("Touched!!")}
             > 
               <View style={styles.row}>
                 <View style={[styles.box1, {}]}>
                 <Image 
-                    source={person.imageleccion}
+                    source={modulo.imageleccion}
                     style={{width: '100%', height: '100%'}}
                   />
                 </View>
                 <View style={[styles.box2, {}]}>
-                  <Text style={{textAlign:"center",fontSize:15}}>{person.lecciontext}</Text>
+                  <Text style={{textAlign:"center",fontSize:15}}>{modulo.lecciontext}</Text>
                 </View>
                 <View style={[styles.box3, {}]}>
                 <Image
-                    source={person.image}
+                    source={modulo.image}
                     style={{width: '100%', height: '100%'}}
                   />
                 </View>
@@ -113,7 +116,7 @@ const InicioScreen0Modulos = () => {
                 </TouchableOpacity>
       <Text>InicioScreen0Modulos</Text>
       <View style={[styles.leccontainer,]}>
-                <TouchableOpacity style={[styles.box1, {  }]}>
+                <TouchableOpacity style={[styles.box1, { borderColor:"#CBD1D1", }]}>
                   <View style={[styles.box1imagen, {  }]}>
                   <Image
                     source={require("../../../imagenes/pythontemplate.png")}
@@ -121,10 +124,10 @@ const InicioScreen0Modulos = () => {
                   />
                   </View>
                 </TouchableOpacity>
-                <View style={[styles.box2, { justifyContent:'flex-end', }]}>
+                <View style={[styles.box2, { justifyContent:'flex-end', borderColor:"transparent", marginRight:'10%',}]}>
                 <Image
                     source={require("../../../imagenes/flecha.png")}
-                    style={{width: '60%', height: '60%'}}
+                    style={{width: '70%', height: '95%', }}
                   />
                 </View>
       </View>
@@ -134,13 +137,13 @@ const InicioScreen0Modulos = () => {
         />
       <View style={[styles.leccontainer,]}>
               
-              <View style={[styles.box2, { justifyContent:'flex-end', alignItems:'flex-end' }]}>
+              <View style={[styles.box2, { justifyContent:'flex-end', alignItems:'flex-end', borderColor:"transparent", marginLeft:'10%'}]}>
               <Image
                   source={require("../../../imagenes/flecha2.png")}
-                  style={{width: '60%', height: '60%'}}
+                  style={{width: '70%', height: '95%'}}
                 />
               </View>
-              <TouchableOpacity style={[styles.box1, {  }]}>
+              <TouchableOpacity style={[styles.box1, { borderColor:"#CBD1D1", }]}>
                 <View style={[styles.box1imagen, {  }]}>
                 <Image
                   source={require("../../../imagenes/pythontemplate.png")}
@@ -162,7 +165,7 @@ const styles = StyleSheet.create({
       //paddingTop:15,
       height:'100%',
       width:'100%',
-      backgroundColor:'#18AEC2',
+      backgroundColor:'#ffffff',
       alignItems:'center',
     },
   
@@ -179,7 +182,6 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
   },
   leccontainer: {
-    backgroundColor:"#14C463",
     width:350,
     height:150,
     marginTop:35,
@@ -190,30 +192,29 @@ const styles = StyleSheet.create({
   },  
   //Cuadrar boxes
   box1: {
-    backgroundColor:'#A70B0B',
+    backgroundColor:'#CBD1D1',
     width: '40%',
     height: '80%',
     marginHorizontal:'1.5%',
     borderRadius:10,
-    //borderColor:"#ffffff",
     borderWidth:2, 
     alignItems:'center',
     justifyContent: 'center',
   },
   box1imagen: {
     backgroundColor:'#944040',
+    borderColor:"#CBD1D1",
     width: '80%',
     height: '80%',
     borderRadius:10,
     borderWidth:2, 
   },
   box2: {
-    backgroundColor:'#A70B0B',
+    marginTop:'25%',
     width: '40%',
     height: '80%',
     borderRadius:10,
     marginHorizontal:'1.5%',
-    //borderColor:"#ffffff",
     borderWidth:2, 
   },
   image: {
