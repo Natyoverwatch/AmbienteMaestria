@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native'
+import { View, Text,SafeAreaView } from 'react-native'
 import React,{useState,useEffect} from 'react';
 
 import {getAuth,signInWithEmailAndPassword} from 'firebase/auth';
 import {initializeApp} from 'firebase/app';
 import { firebaseConfig } from '../../../firebase-config';
 import { getDatabase, ref, onValue} from "firebase/database";
+
 
 
 function userdata(){
@@ -30,12 +31,12 @@ const PerfilScreen0 = () => {
   if(global.iduser!='') userinfo=userdata();
     //console.log(userinfo);
   return (
-    <View>
+    <SafeAreaView>
       <Text>{userinfo.username}</Text>
       <Text>{userinfo.curse}</Text>
       <Text>{userinfo.email}</Text>
       
-    </View>
+    </SafeAreaView>
   )
 }
 

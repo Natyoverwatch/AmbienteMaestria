@@ -95,11 +95,9 @@ function LoginScreen(){
       
   </View>
   );
-
 }
 
 export const IntroScreen1Ingresar = () => {
-
   return (
     <LoginScreen />
   );
