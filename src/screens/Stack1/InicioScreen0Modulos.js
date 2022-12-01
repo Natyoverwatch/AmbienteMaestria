@@ -104,7 +104,7 @@ function Orderlecciones() {
 const InicioScreen0Modulos = () => {
   const navigation=useNavigation();
   return (
-    <View>
+    <View style={styles.containerPapa}>
       <TouchableOpacity  
                     style={styles.button}
                     onPress={()=> navigation.navigate("Inicio2")}>
@@ -125,9 +125,6 @@ const InicioScreen0Modulos = () => {
                     style={{width: '100%', height: '100%'}}
                   />
                 </View>
-                
-                
-              
             </TouchableOpacity>
 </View>
   )
@@ -138,7 +135,7 @@ const styles = StyleSheet.create({
       //paddingTop:15,
       height:'100%',
       width:'100%',
-      backgroundColor:'#1F646D',
+      backgroundColor:'#18AEC2',
       alignItems:'center',
     },
   
