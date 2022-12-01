@@ -8,6 +8,8 @@ import InicioScreen3Ejercicio from '../screens/Stack1/InicioScreen3Ejercicio';
 import InicioScreen4Codigo from '../screens/Stack1/InicioScreen4Codigo';
 import InicioScreen5Terminal from '../screens/Stack1/InicioScreen5Terminal';
 import InicioScreen6Siguiente from '../screens/Stack1/InicioScreen6Siguiente';
+import InicioScreen1Leccciones3 from '../screens/Stack1/Lecciones/InicioScreen1Leccciones3';
+import InicioScreen1Leccciones2 from '../screens/Stack1/Lecciones/InicioScreen1Leccciones2';
 
 const FondoHeader = () => (
   <Image
@@ -49,8 +51,48 @@ export const StackScreen1Inicio = () => {
                     headerShown: false,
                 }}/>
             <IntoStack.Screen 
-                name="Inicio2" 
+                name="Inicio2.1" 
                 component={InicioScreen1Leccciones}
+                options={{
+                    title:"Lecciones",
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      color:'#ffffff',
+                      fontSize:25,
+                      marginLeft:-30,
+                    },
+                    headerTransparent: true,
+                    headerBackImage: BackImage,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        shadowColor: 'transparent',
+                        
+                    },
+                    headerBackground:FondoHeader,
+                    }}/>
+            <IntoStack.Screen 
+                name="Inicio2.2" 
+                component={InicioScreen1Leccciones2}
+                options={{
+                    title:"Lecciones",
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      color:'#ffffff',
+                      fontSize:25,
+                      marginLeft:-30,
+                    },
+                    headerTransparent: true,
+                    headerBackImage: BackImage,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        shadowColor: 'transparent',
+                        
+                    },
+                    headerBackground:FondoHeader,
+                    }}/>
+            <IntoStack.Screen 
+                name="Inicio2.3" 
+                component={InicioScreen1Leccciones3}
                 options={{
                     title:"Lecciones",
                     headerTitleStyle: {

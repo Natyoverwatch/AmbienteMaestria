@@ -1,4 +1,4 @@
-import { View, Text,StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native'
+import { View, Text,StyleSheet, Dimensions, TouchableOpacity, Image, ImageBackground, ScrollView } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -8,96 +8,129 @@ const modulos = [
   {
 	id: 1,
 	name: "Modulo 1",
-  colorbordebox1:"",
-  color: "#1F646D",
-  sentido: "right",
-  lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../imagenes/pythontemplate.png"),
-  image: require("../../../imagenes/number1.png")
+  colorbordebox1:"#CBD1D1",
+  colorbordebox2:"transparent",
+  marginBottom:175,
+  sentido: "left",
+  marginLeft:"-70%",
+  modulotitulo:"Primeros Pasos",
+  ruta:"Inicio2.1",
+  imagenmodulo:require("../../../imagenes/imagenM1.png"),
+  imagenflecha:require("../../../imagenes/flecha.png"),
+  imagennumero: require("../../../imagenes/numeroM1.png"),
   },
   {
 	id: 2,
 	name: "Modulo 2",
-  colorbordebox1:"",
-  color: "#FFFFFF",
-  sentido: "left",
-  lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../imagenes/pythontemplate.png"),
-  image: require("../../../imagenes/number1.png")
+  colorbordebox1:"#CBD1D1",
+  colorbordebox2:"transparent",
+  marginBottom:175,
+  sentido: "right",
+  marginLeft:"70%",
+  modulotitulo:"Datos",
+  ruta:"Inicio2.2",
+  imagenmodulo:require("../../../imagenes/imagenM2.png"),
+  imagenflecha:require("../../../imagenes/flecha2.png"),
+  imagennumero: require("../../../imagenes/numeroM2.png"),
   },
   {
 	id: 3,
 	name: "Modulo 3",
-  sentido: "right",
-  colorbordebox1:"",
-  color: "#1F646D",
-  lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../imagenes/pythontemplate.png"),
-  image: require("../../../imagenes/number1.png")
+  sentido: "left",
+  colorbordebox1:"#CBD1D1",
+  colorbordebox2:"transparent",
+  marginBottom:175,
+  marginLeft:"-70%",
+  modulotitulo:"Operadores básicos",
+  ruta:"Inicio2.3",
+  imagenmodulo:require("../../../imagenes/imagenM3.png"),
+  imagenflecha:require("../../../imagenes/flecha.png"),
+  imagennumero: require("../../../imagenes/numeroM3.png"),
   },
-  
+  {
+    id: 4,
+    name: "Modulo 4",
+    colorbordebox1:"#CBD1D1",
+    colorbordebox2:"transparent",
+    marginBottom:0,
+    sentido: "right",
+    marginLeft:"70%",
+    modulotitulo:"Estructuras de datos",
+    ruta:"Inicio2.3",
+    imagenmodulo:require("../../../imagenes/imagenM4.png"),
+    imagenflecha:require("../../../imagenes/fondonada.png"),
+    imagennumero: require("../../../imagenes/numeroM4.png"),
+    },
 ];
 
-function Orderlecciones() {
-
+function Modulosorden() {
+  const navigation=useNavigation();
   return(
-    <View>
+    <View style={styles.containerPapa}>
       {modulos.map((modulo) => {
         if(modulo.sentido=="left"){
           return (
-            <TouchableOpacity 
-              key={modulo.id} 
-              style={[styles.leccontainer,{backgroundColor: modulo.color,}]}
-              onPress={()=> console.log("Touched!!")}
-            >
-              <View style={styles.row}>
-                <View style={[styles.box1, {  }]}>
-                <Image
-                    source={modulo.image}
-                    style={{width: '100%', height: '100%'}}
-                  />
-                </View>
-                <View style={[styles.box2, {  }]}>
-                  <Text style={{textAlign:"center",fontSize:16}}>{modulo.lecciontext}</Text>
-                </View>
-                <View style={[styles.box3, {  }]}>
-                  <Image 
-                    source={modulo.imageleccion}
-                    style={{width: '100%', height: '100%'}}
+            <View style={[styles.contenedorgeneral,{marginBottom: modulo.marginBottom,}]}>
+              <View style={[styles.leccontainer,]}>
+                <TouchableOpacity 
+                  key={modulo.id} 
+                  style={[styles.box1, { borderColor: modulo.colorbordebox1, }]}
+                  onPress={()=> navigation.navigate(modulo.ruta)}>
+                  <View style={[styles.box1imagen, {  }]}>
+                    <Image
+                      source={modulo.imagenmodulo}
+                      style={{width: '100%', height: '100%', borderRadius:10,}}
+                    />
+                  </View>
+                  <Text style={styles.texto}>{modulo.modulotitulo}</Text>
+                </TouchableOpacity>
+                <View style={[styles.box2, { justifyContent:'flex-end', borderColor: modulo.colorbordebox2, marginRight:'10%',}]}>
+                  <Image
+                    source={modulo.imagenflecha}
+                    style={{width: '70%', height: '95%', }}
                   />
                 </View>
               </View>
-              
-            </TouchableOpacity>
-  
+              <TouchableOpacity style={[styles.boxnumerotouch, { marginLeft: modulo.marginLeft, }]}>
+                <Image
+                  source={modulo.imagennumero}
+                  style={{width: '100%', height: '100%',}}
+                />
+              </TouchableOpacity>
+            </View>
           );
         }else if(modulo.sentido=="right"){
           return (
-            <TouchableOpacity 
-              key={modulo.id} 
-              style={[styles.leccontainer,{backgroundColor: modulo.color,}]}
-              onPress={()=> console.log("Touched!!")}
-            > 
-              <View style={styles.row}>
-                <View style={[styles.box1, {}]}>
-                <Image 
-                    source={modulo.imageleccion}
-                    style={{width: '100%', height: '100%'}}
+            <View style={[styles.contenedorgeneral, {marginBottom: modulo.marginBottom,}]}>
+              <View style={[styles.leccontainer,]}>
+                <View style={[styles.box2, { justifyContent:'flex-end', alignItems:'flex-end', borderColor: modulo.colorbordebox2, marginLeft:'10%'}]}>
+                  <Image
+                    source={modulo.imagenflecha}
+                    style={{width: '70%', height: '95%'}}
                   />
                 </View>
-                <View style={[styles.box2, {}]}>
-                  <Text style={{textAlign:"center",fontSize:15}}>{modulo.lecciontext}</Text>
-                </View>
-                <View style={[styles.box3, {}]}>
-                <Image
-                    source={modulo.image}
-                    style={{width: '100%', height: '100%'}}
-                  />
-                </View>
+                <TouchableOpacity 
+                  key={modulo.id} 
+                  style={[styles.box1, { borderColor: modulo.colorbordebox1}]}
+                  onPress={()=> navigation.navigate(modulo.ruta)}>
+                  <View style={[styles.box1imagen, {  }]}>
+                    <Image
+                      source={modulo.imagenmodulo}
+                      style={{width: '100%', height: '100%', borderRadius:10,}}
+                    />
+                  </View>
+                  <Text style={styles.texto}>{modulo.modulotitulo}</Text>
+                </TouchableOpacity>
               </View>
-              
-            </TouchableOpacity>
-  
+              <TouchableOpacity  
+                style={[styles.boxnumerotouch, { marginLeft: modulo.marginLeft, }]}
+                onPress={()=> navigation.navigate("Inicio2")}>
+                <Image
+                  source={modulo.imagennumero}
+                  style={{width: '100%', height: '100%',}}
+                />
+              </TouchableOpacity>
+            </View>
           );
         }
         
@@ -109,66 +142,42 @@ const InicioScreen0Modulos = () => {
   const navigation=useNavigation();
   return (
     <View style={styles.containerPapa}>
-      <TouchableOpacity  
-                    style={styles.button}
-                    onPress={()=> navigation.navigate("Inicio2")}>
-                    <Text style={styles.text2}>Empecemos</Text>
-                </TouchableOpacity>
-      <Text>InicioScreen0Modulos</Text>
-      <View style={[styles.leccontainer,]}>
-                <TouchableOpacity style={[styles.box1, { borderColor:"#CBD1D1", }]}>
-                  <View style={[styles.box1imagen, {  }]}>
-                  <Image
-                    source={require("../../../imagenes/pythontemplate.png")}
-                    style={{width: '100%', height: '100%'}}
-                  />
-                  </View>
-                </TouchableOpacity>
-                <View style={[styles.box2, { justifyContent:'flex-end', borderColor:"transparent", marginRight:'10%',}]}>
-                <Image
-                    source={require("../../../imagenes/flecha.png")}
-                    style={{width: '70%', height: '95%', }}
-                  />
-                </View>
-      </View>
-      <Image
-          source={require("../../../imagenes/numeroM1.png")}
-          style={{width: '22%', height: '12%', marginTop:'-48%', marginLeft:'-70%', marginBottom:'20%'}}
-        />
-      <View style={[styles.leccontainer,]}>
-              
-              <View style={[styles.box2, { justifyContent:'flex-end', alignItems:'flex-end', borderColor:"transparent", marginLeft:'10%'}]}>
-              <Image
-                  source={require("../../../imagenes/flecha2.png")}
-                  style={{width: '70%', height: '95%'}}
-                />
-              </View>
-              <TouchableOpacity style={[styles.box1, { borderColor:"#CBD1D1", }]}>
-                <View style={[styles.box1imagen, {  }]}>
-                <Image
-                  source={require("../../../imagenes/pythontemplate.png")}
-                  style={{width: '100%', height: '100%'}}
-                />
-                </View>
-              </TouchableOpacity>
-    </View>
-    <Image
-        source={require("../../../imagenes/numeroM1.png")}
-        style={{width: '22%', height: '12%', marginTop:'-48%', marginLeft:'70%'}}
-      />
+      <ImageBackground
+        source={require('../../../imagenes/header.png')}
+        style={{width: '100%', height: '45%', marginBottom:'-50%'}}
+      >
+        <Text style={{fontWeight: 'bold',
+                      color:'#ffffff',
+                      fontSize:25,
+                      marginLeft:'10%',
+                      marginTop:'15%'}}>Sesiones</Text>
+      </ImageBackground>
+      <ScrollView style={{padding:0}}>
+      <Modulosorden/>
+      </ScrollView>
+      
 </View>
   )
 }
+/*
 
+*/
 const styles = StyleSheet.create({
   containerPapa: {
+    
+    //paddingTop:'8%',
       //paddingTop:15,
       height:'100%',
       width:'100%',
       backgroundColor:'#ffffff',
       alignItems:'center',
     },
-  
+  texto:{
+    textAlign:"center",
+    fontSize:15,
+    color:'#21828F',
+    fontWeight:"700",
+  },
   button: {
       marginTop:'10%',
       borderRadius: 20,
@@ -193,8 +202,8 @@ const styles = StyleSheet.create({
   //Cuadrar boxes
   box1: {
     backgroundColor:'#CBD1D1',
-    width: '40%',
-    height: '80%',
+    width: '45%',
+    height: '90%',
     marginHorizontal:'1.5%',
     borderRadius:10,
     borderWidth:2, 
@@ -202,10 +211,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box1imagen: {
-    backgroundColor:'#944040',
-    borderColor:"#CBD1D1",
-    width: '80%',
-    height: '80%',
+    marginTop:'10%',
+    borderColor:"#21828F",
+    width: '70%',
+    height: '70%',
     borderRadius:10,
     borderWidth:2, 
   },
@@ -217,8 +226,23 @@ const styles = StyleSheet.create({
     marginHorizontal:'1.5%',
     borderWidth:2, 
   },
-  image: {
-    flex: 1,
+  contenedorgeneral: {
+    height:'1%',
+    width:'110%',
+    alignItems:'center',
+    
+  },
+  boxnumerotouch: {
+    width: '23%',
+    height: '1100%',
+    marginTop:'-48%', 
+    borderColor:'transparent',
+    marginBottom:'20%',
+    marginHorizontal:'1.5%',
+    borderRadius:100,
+    borderWidth:2, 
+    alignItems:'center',
+    justifyContent: 'center',
   },
   containerprogressbar: {
     backgroundColor: '#1F646D',

@@ -6,11 +6,11 @@ const persons = [
   {
 	id: 1,
 	name: "Earnest Green",
-  color: "#1F646D",
+  color: "#641F6D",
   sentido: "right",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../imagenes/pythontemplate.png"),
-  image: require("../../../imagenes/number1.png")
+  imageleccion:require("../../../../imagenes/pythontemplate.png"),
+  image: require("../../../../imagenes/number1.png")
   },
   {
 	id: 2,
@@ -18,8 +18,8 @@ const persons = [
   color: "#FFFFFF",
   sentido: "left",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../imagenes/pythontemplate.png"),
-  image: require("../../../imagenes/number1.png")
+  imageleccion:require("../../../../imagenes/pythontemplate.png"),
+  image: require("../../../../imagenes/number1.png")
   },
   {
 	id: 3,
@@ -27,8 +27,8 @@ const persons = [
   sentido: "right",
   color: "#1F646D",
   lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../imagenes/pythontemplate.png"),
-  image: require("../../../imagenes/number1.png")
+  imageleccion:require("../../../../imagenes/pythontemplate.png"),
+  image: require("../../../../imagenes/number1.png")
   },
   
 ];
