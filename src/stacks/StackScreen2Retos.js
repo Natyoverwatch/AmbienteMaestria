@@ -28,11 +28,7 @@ const StackScreen2Retos = () => {
                 name="Reto1" 
                 component={RetosScreen0Inicio}
                 options={{
-                    title:false,
-                    headerStyle: {
-                        backgroundColor: '#B404F4',
-                        shadowColor:'transparent',
-                    },
+                    headerShown:false,
                 }}/>
             <IntoStack.Screen 
                 name="Reto2" 
