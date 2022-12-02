@@ -19,7 +19,7 @@ const persons = [
   color: "#FFFFFF",
   sentido: "left",
   colorfont:"#000000",
-  ruta:"Modulo1Leccion2Explicacion",
+  ruta:"Modulo1Leccion2Explicacion1",
   lecciontext:"Lección No 2. Funcion Print",
   imageleccion:require("../../../../imagenes/imagenL1.2.jpg"),
   image: require("../../../../imagenes/numL2.png")

@@ -2,7 +2,8 @@ import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity, ScrollView
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 
-const InicioScreen2Ejercicio = ({navigation}) => {
+const L2InicioScreen2Explicacion = ({navigation}) => {
+
   return (
     <View style={styles.container}>
       <View style={styles.containerprogressbar}>
@@ -48,6 +49,8 @@ const InicioScreen2Ejercicio = ({navigation}) => {
     </View>
   )
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -98,4 +101,5 @@ const styles = StyleSheet.create({
     marginBottom:'5%',
   },
 });
-export default InicioScreen2Ejercicio
+
+export default L2InicioScreen2Explicacion

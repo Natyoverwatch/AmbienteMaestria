@@ -1,7 +1,8 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 
-const InicioScreen3Ejercicio = () => {
+const L1InicioScreen3Ejercicio = () => {
   return (
     <View>
       <Text>InicioScreen0Modulos</Text>
@@ -9,4 +10,4 @@ const InicioScreen3Ejercicio = () => {
   )
 }
 
-export default InicioScreen3Ejercicio
+export default L1InicioScreen3Ejercicio

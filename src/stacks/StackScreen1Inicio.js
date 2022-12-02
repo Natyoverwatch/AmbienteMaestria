@@ -7,13 +7,15 @@ import InicioScreen1Leccciones3 from '../screens/Stack1/Lecciones modulos/Inicio
 import InicioScreen1Leccciones2 from '../screens/Stack1/Lecciones modulos/InicioScreen1Leccciones2';
 import InicioScreen1Leccciones4 from '../screens/Stack1/Lecciones modulos/InicioScreen1Leccciones4';
 //Modulo 1 - Leccion 1
-import InicioScreen2Explicacion from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion1/InicioScreen2Explicacion';
+import InicioScreen1Explicacion from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion1/InicioScreen1Explicacion';
 import InicioScreen3Ejercicio from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion1/InicioScreen3Ejercicio';
 import InicioScreen4Codigo from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion1/InicioScreen4Codigo';
 import InicioScreen5Terminal from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion1/InicioScreen5Terminal';
 import InicioScreen6Siguiente from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion1/InicioScreen6Siguiente';
 //Modulo 1 - Leccion 2
-import InicioScreen1Explicacion from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion2/InicioScreen1Explicacion';
+import L2InicioScreen1Explicacion from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion2/InicioScreen1Explicacion';
+import L2InicioScreen2Explicacion from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion2/InicioScreen2Explicacion';
+import L2InicioScreen3Explicacion from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion2/InicioScreen3Explicacion';
 import InicioScreen2Ejercicio from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion2/InicioScreen2Ejercicio';
 import InicioScreen3Codigo from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion2/InicioScreen3Codigo';
 import InicioScreen4Terminal from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion2/InicioScreen4Terminal';
@@ -87,7 +89,7 @@ export const StackScreen1Inicio = () => {
                     }}/>
             <IntoStack.Screen 
                 name="Modulo1Leccion1Explicacion" 
-                component={InicioScreen2Explicacion}
+                component={InicioScreen1Explicacion}
                 options={{
                     title:"Zen de Python",
                     headerTitleStyle: {
@@ -186,8 +188,48 @@ export const StackScreen1Inicio = () => {
                     headerBackground:FondoHeader,
             }}/>
             <IntoStack.Screen 
-                name="Modulo1Leccion2Explicacion" 
-                component={InicioScreen1Explicacion}
+                name="Modulo1Leccion2Explicacion1" 
+                component={L2InicioScreen1Explicacion}
+                options={{
+                    title:"Función Print",
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      color:'#ffffff',
+                      fontSize:25,
+                      marginLeft:-30,
+                    },
+                    headerTransparent: true,
+                    headerBackImage: BackImage,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        shadowColor: 'transparent',
+                        
+                    },
+                    headerBackground:FondoHeader,
+            }}/>
+            <IntoStack.Screen 
+                name="Modulo1Leccion2Explicacion2" 
+                component={L2InicioScreen2Explicacion}
+                options={{
+                    title:"Función Print",
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      color:'#ffffff',
+                      fontSize:25,
+                      marginLeft:-30,
+                    },
+                    headerTransparent: true,
+                    headerBackImage: BackImage,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        shadowColor: 'transparent',
+                        
+                    },
+                    headerBackground:FondoHeader,
+            }}/>
+            <IntoStack.Screen 
+                name="Modulo1Leccion2Explicacion3" 
+                component={L2InicioScreen3Explicacion}
                 options={{
                     title:"Función Print",
                     headerTitleStyle: {
@@ -209,7 +251,7 @@ export const StackScreen1Inicio = () => {
                 name="Modulo1Leccion2Ejercicio" 
                 component={InicioScreen2Ejercicio}
                 options={{
-                    title:"Lecciones",
+                    title:"Ejercicio",
                     headerTitleStyle: {
                       fontWeight: 'bold',
                       color:'#ffffff',
