@@ -26,6 +26,7 @@ import L3InicioScreen2Ejercicio from '../screens/Stack1/Lecciones contenidos/Mod
 import L3InicioScreen3Codigo from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion3/InicioScreen3Codigo';
 import L3InicioScreen4Terminal from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion3/InicioScreen4Terminal';
 import L3InicioScreen5Siguiente from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion3/InicioScreen5Siguiente';
+import InicioScreen1Explicacion2 from '../screens/Stack1/Lecciones contenidos/Modulo1/Leccion1/InicioScreen1Explicacion2';
 
 
 const FondoHeader = () => (
@@ -90,6 +91,26 @@ export const StackScreen1Inicio = () => {
             <IntoStack.Screen 
                 name="Modulo1Leccion1Explicacion" 
                 component={InicioScreen1Explicacion}
+                options={{
+                    title:"Zen de Python",
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      color:'#ffffff',
+                      fontSize:25,
+                      marginLeft:-30,
+                    },
+                    headerTransparent: true,
+                    headerBackImage: BackImage,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        shadowColor: 'transparent',
+                        
+                    },
+                    headerBackground:FondoHeader,
+            }}/>
+            <IntoStack.Screen 
+                name="Modulo1Leccion1Explicacion2" 
+                component={InicioScreen1Explicacion2}
                 options={{
                     title:"Zen de Python",
                     headerTitleStyle: {

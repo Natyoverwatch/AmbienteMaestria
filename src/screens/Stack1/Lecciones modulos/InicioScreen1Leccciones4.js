@@ -108,7 +108,7 @@ const InicioScreen1Leccciones4 = () => {
   return (  
     <View style={styles.container}>
         <View style={styles.containerprogressbar}>
-        <Progress.Bar progress={.4} style={styles.progress} width={280}  color="#10E6DE" />
+        <Progress.Bar progress={.0} style={styles.progress} width={280}  color="#10E6DE" />
         </View>
         <Orderlecciones />
     </View>

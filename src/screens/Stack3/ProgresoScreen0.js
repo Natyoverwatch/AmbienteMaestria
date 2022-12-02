@@ -4,10 +4,10 @@ import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar,View,Image } from
 import * as Progress from 'react-native-progress';
 
 
-let progressM1=0.1;
-let progressM2=0.5;
-let progressM3=0.6;
-let progressM4=0.8;
+let progressM1=0.3333;
+let progressM2=0.0;
+let progressM3=0.0;
+let progressM4=0.0;
 
 const Modulos=[
   {
