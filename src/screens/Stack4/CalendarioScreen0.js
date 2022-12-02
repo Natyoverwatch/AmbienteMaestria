@@ -57,7 +57,7 @@ const CalendarioScreen0 = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{width:"90%",height:"100%",alignContent:"center",marginTop:"10%"}}>
+      <View style={{width:"90%",height:"100%",alignContent:"center",marginTop:"5%"}}>
       <Calendar markedDates={marked}/>
               <Text style={{margin:"5%",textAlign:"center",fontSize:20,color:"#2F2260",fontWeight: 'bold'}}>Eventos de este mes</Text>
         <CalendarioEventos />
@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
     margin:10,
     borderRadius:50,
     padding:10,
+    marginTop:"20%",
 
   },
   item: {

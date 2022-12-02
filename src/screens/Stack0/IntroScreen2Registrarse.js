@@ -118,11 +118,11 @@ function RegisterScreen(){
           </SafeAreaView>
           <SafeAreaView style={styles.campodato}>
             <Text style={styles.dato}>Contraseña</Text>
-            <TextInput onChangeText={(text) => setContra(text)}  style={styles.input}></TextInput>
+            <TextInput secureTextEntry={true} onChangeText={(text) => setContra(text)}  style={styles.input}></TextInput>
           </SafeAreaView>
           <SafeAreaView style={styles.campodato}>
             <Text style={styles.dato}>Confirmar contraseña</Text>
-            <TextInput onChangeText={(text) => setContracon(text)} style={styles.input}></TextInput>
+            <TextInput secureTextEntry={true} onChangeText={(text) => setContracon(text)} style={styles.input}></TextInput>
           </SafeAreaView>
           <SafeAreaView>
             <TouchableOpacity style={styles.button} onPress={refpass}>

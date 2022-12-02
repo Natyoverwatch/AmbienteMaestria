@@ -74,10 +74,10 @@ function LoginScreen(){
           </Svg>
           <View style={styles.containerdata}>
         <View>
-          <TextInput onChangeText={(text) => setCorreo(text)} style={styles.input} placeholder="Correo"></TextInput>
+          <TextInput  onChangeText={(text) => setCorreo(text)} style={styles.input} placeholder="Correo"></TextInput>
         </View>
         <View>
-          <TextInput onChangeText={(text) => setContra(text)} style={styles.input} placeholder="Contraseña"></TextInput>
+          <TextInput secureTextEntry={true} onChangeText={(text) => setContra(text)} style={styles.input} placeholder="Contraseña"></TextInput>
         </View>
         <View>
           <TouchableOpacity onPress={handleSignIn} style={styles.button}>
