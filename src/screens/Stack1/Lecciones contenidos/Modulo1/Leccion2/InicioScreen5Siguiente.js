@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const InicioScreen2Explicacion = () => {
+const InicioScreen5Siguiente = () => {
   return (
     <View>
       <Text>InicioScreen0Modulos</Text>
@@ -9,4 +9,4 @@ const InicioScreen2Explicacion = () => {
   )
 }
 
-export default InicioScreen2Explicacion
+export default InicioScreen5Siguiente

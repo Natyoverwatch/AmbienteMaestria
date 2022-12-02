@@ -1,35 +1,36 @@
 import { StyleSheet, Text, View,ImageBackground,Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import * as Progress from 'react-native-progress';
+import { useNavigation } from '@react-navigation/native';
 
 const persons = [
   {
 	id: 1,
-	name: "Earnest Green",
   color: "#1F646D",
   sentido: "right",
   colorfont:"#ffffff",
-  lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+  ruta:"Modulo1Leccion1Explicacion",
+  lecciontext:"Lección No 1. "+"Listas",
   imageleccion:require("../../../../imagenes/imagenL4.1.png"),
   image: require("../../../../imagenes/numL1.png")
   },
   {
 	id: 2,
-	name: "Winston Orn",
   color: "#FFFFFF",
   sentido: "left",
   colorfont:"#000000",
-  lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+  ruta:"Modulo1Leccion1Explicacion",
+  lecciontext:"Lección No 2. "+"Tuplas",
   imageleccion:require("../../../../imagenes/imagenL4.2.png"),
   image: require("../../../../imagenes/numL2.png")
   },
   {
 	id: 3,
-	name: "Carlton Collins",
   sentido: "right",
   color: "#1F646D",
   colorfont:"#ffffff",
-  lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
+  ruta:"Modulo1Leccion1Explicacion",
+  lecciontext:"Lección No 3. "+"Diccionarios",
   imageleccion:require("../../../../imagenes/imagenL4.3.png"),
   image: require("../../../../imagenes/numL3.png")
   },
@@ -37,7 +38,7 @@ const persons = [
 ];
 
 function Orderlecciones() {
-
+  const navigation=useNavigation();
   return(
     <View>
       {persons.map((person) => {
@@ -46,7 +47,7 @@ function Orderlecciones() {
             <TouchableOpacity 
               key={person.id} 
               style={[styles.leccontainer,{backgroundColor: person.color,}]}
-              onPress={()=> console.log("Touched!!")}
+              onPress={()=> navigation.navigate(person.ruta)}
             >
               <View style={styles.row}>
                 <View style={[styles.box3, {  }]}>
@@ -56,7 +57,7 @@ function Orderlecciones() {
                   />
                 </View>
                 <View style={[styles.box2, {  }]}>
-                  <Text style={{textAlign:"center",fontSize:16, color: person.colorfont}}>{person.lecciontext}</Text>
+                  <Text style={{textAlign:"center",fontSize:17, fontWeight:'bold', color: person.colorfont}}>{person.lecciontext}</Text>
                 </View>
                 <View style={[styles.box1, { borderColor:"#1F646D", }]}>
                   <Image 
@@ -74,7 +75,7 @@ function Orderlecciones() {
             <TouchableOpacity 
               key={person.id} 
               style={[styles.leccontainer,{backgroundColor: person.color,}]}
-              onPress={()=> console.log("Touched!!")}
+              onPress={()=> navigation.navigate(person.ruta)}
             > 
               <View style={styles.row}>
                 <View style={[styles.box1, {borderColor:"#C5CACA",}]}>
@@ -84,7 +85,7 @@ function Orderlecciones() {
                   />
                 </View>
                 <View style={[styles.box2, {}]}>
-                  <Text style={{textAlign:"center",fontSize:15, color: person.colorfont}}>{person.lecciontext}</Text>
+                  <Text style={{textAlign:"center",fontSize:17, fontWeight:'bold', color: person.colorfont}}>{person.lecciontext}</Text>
                 </View>
                 <View style={[styles.box3, {}]}>
                 <Image

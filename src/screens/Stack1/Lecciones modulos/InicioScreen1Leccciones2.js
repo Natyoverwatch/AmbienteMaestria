@@ -1,43 +1,44 @@
 import { StyleSheet, Text, View,ImageBackground,Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import * as Progress from 'react-native-progress';
+import { useNavigation } from '@react-navigation/native';
 
 const persons = [
   {
 	id: 1,
-	name: "Earnest Green",
   color: "#1F646D",
   sentido: "right",
   colorfont:"#ffffff",
-  lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../../imagenes/imagenL3.1.png"),
+  ruta:"Modulo1Leccion1Explicacion",
+  lecciontext:"Lección No 1. "+"Variables",
+  imageleccion:require("../../../../imagenes/imagenL2.1.jpg"),
   image: require("../../../../imagenes/numL1.png")
   },
   {
 	id: 2,
-	name: "Winston Orn",
   color: "#FFFFFF",
   sentido: "left",
   colorfont:"#000000",
-  lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../../imagenes/imagenL3.2.png"),
+  ruta:"Modulo1Leccion1Explicacion",
+  lecciontext:"Lección No 2. "+"Datos",
+  imageleccion:require("../../../../imagenes/imagenL2.2.jpg"),
   image: require("../../../../imagenes/numL2.png")
   },
   {
 	id: 3,
-	name: "Carlton Collins",
   sentido: "right",
   color: "#1F646D",
   colorfont:"#ffffff",
-  lecciontext:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
-  imageleccion:require("../../../../imagenes/imagenL3.3.png"),
+  ruta:"Modulo1Leccion1Explicacion",
+  lecciontext:"Lección No 3. "+"Tipos de Datos",
+  imageleccion:require("../../../../imagenes/imagenL2.3.jpg"),
   image: require("../../../../imagenes/numL3.png")
   },
   
 ];
 
 function Orderlecciones() {
-
+  const navigation=useNavigation();
   return(
     <View>
       {persons.map((person) => {
@@ -46,7 +47,7 @@ function Orderlecciones() {
             <TouchableOpacity 
               key={person.id} 
               style={[styles.leccontainer,{backgroundColor: person.color,}]}
-              onPress={()=> console.log("Touched!!")}
+              onPress={()=> navigation.navigate(person.ruta)}
             >
               <View style={styles.row}>
                 <View style={[styles.box3, {  }]}>
@@ -56,7 +57,7 @@ function Orderlecciones() {
                   />
                 </View>
                 <View style={[styles.box2, {  }]}>
-                  <Text style={{textAlign:"center",fontSize:16, color: person.colorfont}}>{person.lecciontext}</Text>
+                  <Text style={{textAlign:"center",fontSize:17, fontWeight:'bold', color: person.colorfont}}>{person.lecciontext}</Text>
                 </View>
                 <View style={[styles.box1, { borderColor:"#1F646D", }]}>
                   <Image 
@@ -74,7 +75,7 @@ function Orderlecciones() {
             <TouchableOpacity 
               key={person.id} 
               style={[styles.leccontainer,{backgroundColor: person.color,}]}
-              onPress={()=> console.log("Touched!!")}
+              onPress={()=> navigation.navigate(person.ruta)}
             > 
               <View style={styles.row}>
                 <View style={[styles.box1, {borderColor:"#C5CACA",}]}>
@@ -84,7 +85,7 @@ function Orderlecciones() {
                   />
                 </View>
                 <View style={[styles.box2, {}]}>
-                  <Text style={{textAlign:"center",fontSize:15, color: person.colorfont}}>{person.lecciontext}</Text>
+                  <Text style={{textAlign:"center",fontSize:17, fontWeight:'bold', color: person.colorfont}}>{person.lecciontext}</Text>
                 </View>
                 <View style={[styles.box3, {}]}>
                 <Image
@@ -103,7 +104,7 @@ function Orderlecciones() {
     </View>
   );}
 
-const InicioScreen1Leccciones3 = () => {
+const InicioScreen1Leccciones2 = () => {
   return (  
     <View style={styles.container}>
         <View style={styles.containerprogressbar}>
@@ -175,4 +176,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default InicioScreen1Leccciones3
+export default InicioScreen1Leccciones2
