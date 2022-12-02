@@ -3,6 +3,8 @@ import { View, Text, Image } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 import RetosScreen0Inicio from '../screens/Stack2/RetosScreen0Inicio';
 import RetosScreen1Reto1 from '../screens/Stack2/RetosScreen1Reto1';
+import RetosScreenReto1mal from '../screens/Stack2/RetosScreenReto1mal';
+import RetosScreenReto1bien from '../screens/Stack2/RetosScreenReto1bien';
 
 const FondoHeader = () => (
   <Image
@@ -34,10 +36,12 @@ const StackScreen2Retos = () => {
                 name="Reto1" 
                 component={RetosScreen1Reto1}
                 options={{
-                    title:"Ingresar",
+                    title:"Reto Print",
                     headerTitleStyle: {
                       fontWeight: 'bold',
                       color:'#ffffff',
+                      fontSize:25,
+                      marginLeft:-30,
                     },
                     headerTransparent: true,
                     headerBackImage: BackImage,
@@ -47,6 +51,18 @@ const StackScreen2Retos = () => {
                         
                     },
                     headerBackground:FondoHeader,
+                    }}/>
+            <IntoStack.Screen 
+                name="Reto1mal" 
+                component={RetosScreenReto1mal}
+                options={{
+                  headerShown:false,
+                    }}/>
+            <IntoStack.Screen 
+                name="Reto1bien" 
+                component={RetosScreenReto1bien}
+                options={{
+                  headerShown:false,
                     }}/>
         </IntoStack.Navigator>
     )

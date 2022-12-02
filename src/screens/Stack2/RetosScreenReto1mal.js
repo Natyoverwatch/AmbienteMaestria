@@ -1,34 +1,28 @@
-import { View, Text, StyleSheet,Image, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet,Image,ImageBackground, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 
-const InicioScreen5Siguiente = ({navigation}) => {
+const RetosScreenReto1mal = ({navigation}) => {
   return (
+    <View style={styles.containerPapa}>
+      <ImageBackground
+      source={require('../../../imagenes/header.png')}
+      style={{width: '100%', height: '45%', marginBottom:'-50%'}}
+    ></ImageBackground>
     <View style={styles.container}>
-      <View style={styles.containerprogressbar}>
-      <View style={styles.containerprogressbarinsidefull}>
-      </View>
-      <View style={styles.containerprogressbarinsidefull}>
-      </View>
-      <View style={styles.containerprogressbarinsidefull}>
-      </View>
-      <View style={styles.containerprogressbarinsidefull}>
-      </View>
-      <View style={styles.containerprogressbarinsidefull}>
-      </View>
-      <View style={styles.containerprogressbarinsidefull}>
-      </View>
-    </View>
     
-    <Text style={{fontWeight:"bold",fontSize:20,marginTop:"5%"}}>Felicitaciones lograste pasar la lección</Text>
-    <Image 
-        source={require('../../../../../../imagenes/celebracion.gif')}  
-        style={{width: "90%", height: "50%" }}
+    <Text style={{fontWeight:"bold",fontSize:28,marginVertical:"5%", color:'#0EA088'}}>
+      Suerte para la próxima
+    </Text>
+    <Image
+        source={require('../../../imagenes/incorrecto.gif')}  
+        style={{width: "80%", height: "50%", position:'absolute', marginTop:'30%'}}
     />
+    </View>
     <TouchableOpacity  
           style={styles.button}
-          onPress={()=> navigation.navigate("Modulo1")}>
-          <Text style={styles.text2}>Siguiente</Text>
+          onPress={()=> navigation.navigate("Reto1")}>
+          <Text style={styles.text2}>Volver a Intentarlo</Text>
       </TouchableOpacity>
     </View>
   )
@@ -36,10 +30,19 @@ const InicioScreen5Siguiente = ({navigation}) => {
 
 
 const styles = StyleSheet.create({
+  containerPapa: {
+  
+    //paddingTop:'8%',
+      //paddingTop:15,
+      height:'100%',
+      width:'100%',
+      backgroundColor:'#ffffff',
+      alignItems:'center',
+    },
   container: {
     flex: 1,
     alignItems:"center",
-    paddingTop:'8%',
+    paddingTop:'0%',
     backgroundColor:'#FFFFFF',
   },
   image: {
@@ -84,14 +87,14 @@ const styles = StyleSheet.create({
     fontWeight: '700'
   },
   button:{
-    width:'50%',
+    width:'80%',
     height:'7%',
     borderRadius:10,
     backgroundColor:"#FFAD2B",
     alignItems:'center',
     justifyContent: 'center',
-    marginTop:"5%",
+    marginBottom:"25%",
   },
 });
 
-export default InicioScreen5Siguiente
+export default RetosScreenReto1mal
