@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
+import { WebView } from 'react-native-webview';
 
 const InicioScreen3Codigo = ({navigation}) => {
   return (
@@ -31,9 +32,10 @@ const InicioScreen3Codigo = ({navigation}) => {
           <Text style={styles.textbotones2}>Código</Text>
       </TouchableOpacity>
       </View>
-      <View>
-        <Text style={styles.texto}>Acá  va la terminal</Text>
-      </View>
+      <View style={{flex: 1,marginTop:"0%",width:"95%",borderRadius:10,}}>
+      <WebView
+      source={{uri: 'https://colab.research.google.com/gist/StormShadow010/3335b494b118f7d1cf48aa31c349372f/untitled1.ipynb'}} />
+    </View>
       <TouchableOpacity  
           style={styles.button}
           onPress={()=> navigation.navigate("Modulo1Leccion2Siguiente")}>

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet,Image } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 
@@ -20,7 +20,11 @@ const InicioScreen5Siguiente = () => {
       </View>
     </View>
     
-    <Text>InicioScreen0Modulos</Text>
+    <Text style={{fontWeight:"bold",fontSize:20,marginTop:"5%"}}>Felicitaciones lograste pasar la lección</Text>
+    <Image 
+        source={require('../../../../../../imagenes/celebracion.gif')}  
+        style={{width: "60%", height: "60%" }}
+    />
     </View>
   )
 }
@@ -31,7 +35,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems:"center",
     paddingTop:'8%',
-    backgroundColor:'#E2E2E2',
+    backgroundColor:'#FFFFFF',
   },
   image: {
     flex: 1,
