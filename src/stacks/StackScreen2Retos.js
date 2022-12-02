@@ -25,20 +25,19 @@ const StackScreen2Retos = () => {
     return (
         <IntoStack.Navigator>
             <IntoStack.Screen 
-                name="Reto1" 
+                name="Reto" 
                 component={RetosScreen0Inicio}
                 options={{
                     headerShown:false,
                 }}/>
             <IntoStack.Screen 
-                name="Reto2" 
+                name="Reto1" 
                 component={RetosScreen1Reto1}
                 options={{
                     title:"Ingresar",
                     headerTitleStyle: {
                       fontWeight: 'bold',
                       color:'#ffffff',
-                      fontFamily: 'Montserrat',
                     },
                     headerTransparent: true,
                     headerBackImage: BackImage,

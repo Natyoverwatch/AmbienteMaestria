@@ -3,134 +3,183 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const modulos = [
+const retos = [
   {
 	id: 1,
-	name: "Modulo 1",
-  colorbordebox1:"#CBD1D1",
-  colorbordebox2:"transparent",
-  marginBottom:175,
+	name: "Reto 1",
+  marginBottom:'55%',
   sentido: "left",
-  marginLeft:"-70%",
-  modulotitulo:"Primeros Pasos",
-  ruta:"Modulo1",
-  imagenmodulo:require("../../../imagenes/imagenM1.png"),
-  imagenflecha:require("../../../imagenes/flecha.png"),
-  imagennumero: require("../../../imagenes/numeroM1.png"),
+  modulotituloP1:"Función",
+  modulotituloP2:"Prit",
+  ruta:"Reto1",
+  color:'#EF6718',
+  widthimage: '100%', 
+  heightimage: '95%',
+  imagenreto:require("../../../imagenes/imagenR1.png"),
   },
   {
 	id: 2,
-	name: "Modulo 2",
-  colorbordebox1:"#CBD1D1",
-  colorbordebox2:"transparent",
-  marginBottom:175,
+	name: "Reto 2",
+  marginBottom:'55%',
   sentido: "right",
-  marginLeft:"70%",
-  modulotitulo:"Datos",
-  ruta:"Modulo2",
-  imagenmodulo:require("../../../imagenes/imagenM2.png"),
-  imagenflecha:require("../../../imagenes/flecha2.png"),
-  imagennumero: require("../../../imagenes/numeroM2.png"),
+  modulotituloP1:"Variables",
+  modulotituloP2:"",
+  ruta:"Reto1",
+  color:'#21828F',
+  widthimage: '100%', 
+  heightimage: '94%',
+  imagenreto:require("../../../imagenes/imagenR2.png"),
   },
   {
 	id: 3,
-	name: "Modulo 3",
+	name: "Reto 3",
+  marginBottom:'55%',
   sentido: "left",
-  colorbordebox1:"#CBD1D1",
-  colorbordebox2:"transparent",
-  marginBottom:175,
-  marginLeft:"-70%",
-  modulotitulo:"Operadores básicos",
-  ruta:"Modulo3",
-  imagenmodulo:require("../../../imagenes/imagenM3.png"),
-  imagenflecha:require("../../../imagenes/flecha.png"),
-  imagennumero: require("../../../imagenes/numeroM3.png"),
+  modulotituloP1:"Tipos de",
+  modulotituloP2:"Datos",
+  ruta:"Reto1",
+  color:'#FC2084',
+  widthimage: '100%', 
+  heightimage: '92%',
+  imagenreto:require("../../../imagenes/imagenR3.png"),
   },
   {
-    id: 4,
-    name: "Modulo 4",
-    colorbordebox1:"#CBD1D1",
-    colorbordebox2:"transparent",
-    marginBottom:0,
-    sentido: "right",
-    marginLeft:"70%",
-    modulotitulo:"Estructuras de datos",
-    ruta:"Modulo4",
-    imagenmodulo:require("../../../imagenes/imagenM4.png"),
-    imagenflecha:require("../../../imagenes/fondonada.png"),
-    imagennumero: require("../../../imagenes/numeroM4.png"),
-    },
+  id: 4,
+  name: "Reto 4",
+  marginBottom:'55%',
+  sentido: "right",
+  modulotituloP1:"Operadores",
+  modulotituloP2:"Aritmeticos",
+  ruta:"Reto1",
+  color:'#EF6718',
+  widthimage: '100%', 
+  heightimage: '92%',
+  imagenreto:require("../../../imagenes/imagenR4.png"),
+  },
+  {
+  id: 5,
+  name: "Reto 5",
+  marginBottom:'55%',
+  sentido: "left",
+  modulotituloP1:"Operadores",
+  modulotituloP2:"Relacionales",
+  ruta:"Reto1",
+  color:'#21828F',
+  widthimage: '100%', 
+  heightimage: '95%',
+  imagenreto:require("../../../imagenes/imagenR5.png"),
+  },
+  {
+  id: 6,
+  name: "Reto 6",
+  marginBottom:'55%',
+  sentido: "right",
+  modulotituloP1:"Operadores",
+  modulotituloP2:"Lógicos",
+  ruta:"Reto1",
+  color:'#FC2084',
+  widthimage: '100%', 
+  heightimage: '91%',
+  imagenreto:require("../../../imagenes/imagenR6.png"),
+  },
+  {
+  id: 7,
+  name: "Reto 7",
+  marginBottom:'55%',
+  sentido: "left",
+  modulotituloP1:"Listas",
+  modulotituloP2:"",
+  ruta:"Reto1",
+  color:'#EF6718',
+  widthimage: '100%', 
+  heightimage: '95%',
+  imagenreto:require("../../../imagenes/imagenR7.png"),
+  },
+  {
+  id: 8,
+  name: "Reto 8",
+  marginBottom:'55%',
+  sentido: "right",
+  modulotituloP1:"Diccionario",
+  modulotituloP2:"",
+  ruta:"Reto1",
+  color:'#21828F',
+  widthimage: '100%', 
+  heightimage: '94%',
+  imagenreto:require("../../../imagenes/imagenR8.png"),
+  },
+  {
+  id: 9,
+  name: "Reto 9",
+  marginBottom:'55%',
+  sentido: "left",
+  modulotituloP1:"Tuplas",
+  modulotituloP2:"",
+  ruta:"Reto1",
+  color:'#FC2084',
+  widthimage: '100%', 
+  heightimage: '92%',
+  imagenreto:require("../../../imagenes/imagenR9.png"),
+  },
+  {
+  id: 10,
+  name: "Reto 10",
+  marginBottom:'-600%',
+  sentido: "right",
+  modulotituloP1:"Reto",
+  modulotituloP2:"Sorpresa",
+  ruta:"Reto1",
+  color:'#EF6718',
+  widthimage: '100%', 
+  heightimage: '92%',
+  imagenreto:require("../../../imagenes/imagenR10.png"),
+  },
 ];
 
-function Modulosorden() {
+function Retosorden() {
   const navigation=useNavigation();
   return(
     <View style={styles.containerPapa}>
-      {modulos.map((modulo) => {
-        if(modulo.sentido=="left"){
+      {retos.map((reto) => {
+        if(reto.sentido=="left"){
           return (
-            <View style={[styles.contenedorgeneral,{marginBottom: modulo.marginBottom,}]}>
-              <View style={[styles.leccontainer,]}>
-                <TouchableOpacity 
-                  key={modulo.id} 
-                  style={[styles.box1, { borderColor: modulo.colorbordebox1, }]}
-                  onPress={()=> navigation.navigate(modulo.ruta)}>
-                  <View style={[styles.box1imagen, {  }]}>
-                    <Image
-                      source={modulo.imagenmodulo}
-                      style={{width: '100%', height: '100%', borderRadius:10,}}
-                    />
-                  </View>
-                  <Text style={styles.texto}>{modulo.modulotitulo}</Text>
-                </TouchableOpacity>
-                <View style={[styles.box2, { justifyContent:'flex-end', borderColor: modulo.colorbordebox2, marginRight:'10%',}]}>
-                  <Image
-                    source={modulo.imagenflecha}
-                    style={{width: '70%', height: '95%', }}
-                  />
-                </View>
-              </View>
-              <TouchableOpacity 
-              style={[styles.boxnumerotouch, { marginLeft: modulo.marginLeft, }]}
-              onPress={()=> navigation.navigate(modulo.ruta)}>
-                <Image
-                  source={modulo.imagennumero}
-                  style={{width: '100%', height: '100%',}}
-                />
-              </TouchableOpacity>
-            </View>
+            <View style={[styles.contenedorgeneral,{marginBottom: reto.marginBottom, }]}>
+        <View style={[styles.leccontainer,]}>
+          <TouchableOpacity 
+            //key={modulo.id} 
+            style={[styles.box1, {  }]}
+            onPress={()=> navigation.navigate(reto.ruta)}>
+              <Image
+                source={reto.imagenreto}
+                style={{width: reto.widthimage, height: reto.heightimage, }}
+              />
+            <Text style={[styles.texto,{ paddingBottom:'5%',paddingRight:'30%', color:reto.color,}]}>{reto.modulotituloP1}</Text>
+            <Text style={[styles.texto,{ paddingTop:'15%',paddingRight:'30%', color:reto.color,}]}>{reto.modulotituloP2}</Text>
+          </TouchableOpacity>
+          <View style={[styles.box2, { }]}>
+            
+          </View>
+        </View>
+      </View>
           );
-        }else if(modulo.sentido=="right"){
+        }else if(reto.sentido=="right"){
           return (
-            <View style={[styles.contenedorgeneral, {marginBottom: modulo.marginBottom,}]}>
+            <View style={[styles.contenedorgeneral, {marginBottom: reto.marginBottom,}]}>
               <View style={[styles.leccontainer,]}>
-                <View style={[styles.box2, { justifyContent:'flex-end', alignItems:'flex-end', borderColor: modulo.colorbordebox2, marginLeft:'10%'}]}>
-                  <Image
-                    source={modulo.imagenflecha}
-                    style={{width: '70%', height: '95%'}}
-                  />
+                <View style={[styles.box2, {  alignItems:'flex-end',}]}>
                 </View>
                 <TouchableOpacity 
-                  key={modulo.id} 
-                  style={[styles.box1, { borderColor: modulo.colorbordebox1}]}
-                  onPress={()=> navigation.navigate(modulo.ruta)}>
-                  <View style={[styles.box1imagen, {  }]}>
+                  //key={modulo.id} 
+                  style={[styles.box1, { }]}
+                  onPress={()=> navigation.navigate(reto.ruta)}>
                     <Image
-                      source={modulo.imagenmodulo}
-                      style={{width: '100%', height: '100%', borderRadius:10,}}
+                      source={reto.imagenreto}
+                      style={{width: reto.widthimage, height: reto.heightimage,  }}
                     />
-                  </View>
-                  <Text style={styles.texto}>{modulo.modulotitulo}</Text>
+                  <Text style={[styles.texto,{ paddingBottom:'5%',paddingLeft:'25%', color:reto.color,}]}>{reto.modulotituloP1}</Text>
+                  <Text style={[styles.texto,{ paddingTop:'15%',paddingLeft:'25%', color:reto.color,}]}>{reto.modulotituloP2}</Text>
                 </TouchableOpacity>
               </View>
-              <TouchableOpacity  
-                style={[styles.boxnumerotouch, { marginLeft: modulo.marginLeft, }]}
-                onPress={()=> navigation.navigate(modulo.ruta)}>
-                <Image
-                  source={modulo.imagennumero}
-                  style={{width: '100%', height: '100%',}}
-                />
-              </TouchableOpacity>
             </View>
           );
         }
@@ -153,8 +202,8 @@ const RetosScreen0Inicio = () => {
                     marginLeft:'10%',
                     marginTop:'15%'}}>Retos</Text>
     </ImageBackground>
-    <ScrollView style={{padding:0}}>
-    <Modulosorden/>
+    <ScrollView style={{padding:0,}}>
+      <Retosorden/>
     </ScrollView>
     
 </View>
@@ -174,10 +223,10 @@ containerPapa: {
     alignItems:'center',
   },
 texto:{
+  position:'absolute',
   textAlign:"center",
-  fontSize:15,
-  color:'#21828F',
-  fontWeight:"700",
+  fontSize:21,
+  fontWeight:"500",
 },
 button: {
     marginTop:'10%',
@@ -193,8 +242,7 @@ button: {
 },
 leccontainer: {
   width:350,
-  height:150,
-  marginTop:35,
+  height:250,
   borderRadius:40,
   alignItems:"center",
   justifyContent: 'center',
@@ -202,17 +250,16 @@ leccontainer: {
 },  
 //Cuadrar boxes
 box1: {
-  backgroundColor:'#CBD1D1',
-  width: '45%',
+  backgroundColor:'transparent',
+  borderColor: "transparent",
+  width: '75%',
   height: '90%',
-  marginHorizontal:'1.5%',
   borderRadius:10,
   borderWidth:2, 
   alignItems:'center',
   justifyContent: 'center',
 },
 box1imagen: {
-  marginTop:'10%',
   borderColor:"#21828F",
   width: '70%',
   height: '70%',
@@ -220,18 +267,21 @@ box1imagen: {
   borderWidth:2, 
 },
 box2: {
-  marginTop:'25%',
-  width: '40%',
-  height: '80%',
+  marginRight:'10%',
+  borderColor:"transparent",
+  justifyContent:'flex-end',
+  backgroundColor:'transparent',
+  borderColor: "transparent",
+  //marginTop:'25%',
+  width: '15%',
+  height: '90%',
   borderRadius:10,
-  marginHorizontal:'1.5%',
   borderWidth:2, 
 },
 contenedorgeneral: {
-  height:'1%',
+  height:'0.5%',
   width:'110%',
   alignItems:'center',
-  
 },
 boxnumerotouch: {
   width: '23%',
