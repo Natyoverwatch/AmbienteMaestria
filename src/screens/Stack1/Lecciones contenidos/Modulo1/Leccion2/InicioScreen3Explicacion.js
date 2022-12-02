@@ -7,6 +7,18 @@ const L2InicioScreen2Explicacion = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerprogressbar}>
+      <View style={styles.containerprogressbarinsidefull}>
+      </View>
+      <View style={styles.containerprogressbarinsidefull}>
+      </View>
+      <View style={styles.containerprogressbarinsidefull}>
+      </View>
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
       </View>
       <ScrollView style={{padding:0,}}>
       <Text style={styles.textotitulo}>
@@ -62,12 +74,32 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
   },
+  
   containerprogressbar: {
+    flexDirection: "row",
     backgroundColor: '#8CB0B9',
-    width:'90%',
+    width:'87%',
     height:'7%',
     marginTop:"40%",
+    paddingHorizontal:'10%',
     borderRadius:40,
+    alignItems:'center',
+    justifyContent:'space-between',
+  },
+  containerprogressbarinsideempy: {
+    backgroundColor: '#ffffff',
+    width:'10%',
+    height:'50%',
+    //marginTop:"40%",
+    borderRadius:100,
+    borderColor:'#888B8C',
+  },
+  containerprogressbarinsidefull: {
+    backgroundColor: '#1F646D',
+    width:'10%',
+    height:'50%',
+    //marginTop:"40%",
+    borderRadius:100,
   },
   texto: {
     paddingHorizontal:'5%',

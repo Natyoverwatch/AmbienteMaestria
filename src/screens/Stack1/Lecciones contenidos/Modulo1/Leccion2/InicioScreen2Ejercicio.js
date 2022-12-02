@@ -6,45 +6,34 @@ const InicioScreen2Ejercicio = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerprogressbar}>
+      <View style={styles.containerprogressbarinsidefull}>
       </View>
-      <ScrollView style={{padding:0,}}>
-      <Text style={styles.textotitulo}>
-        CARACTERÍSTICAS: 
-      </Text>
-      <Text style={styles.texto}>
-      1. La función print() admite varios argumentos seguidos. En el programa, los argumentos deben separarse por comas. Así estos se muestran en el mismo orden y en la misma línea, separados por espacios</Text>
-      <View style={{alignItems:'center'}}>
-      <Image 
-          source={require('../../../../../../imagenes/print1.png')}
-          style={{width: 300, height: 100, borderRadius:10, marginVertical:'5%', marginHorizontal:'1.5%'}}
-        />
-        </View>
-        <Text style={styles.texto}>
-          2. Al final de cada print(), Python añade automáticamente un salto de línea
-      </Text>
-      <View style={{alignItems:'center'}}>
-      <Image 
-          source={require('../../../../../../imagenes/print2.png')}
-          style={{width: 300, height: 150, borderRadius:10, marginVertical:'5%', marginHorizontal:'1.5%',}}
-        />
-        </View>
-        <Text style={styles.texto}>
-          3. Para incluir comillas dentro del texto que se quiere mostrar, se puede escribir una contrabarra {"(\)"} antes de la comilla para que Python reconozca la comilla como carácter, no como delimitador de la cadena:
-      </Text>
-      <View style={{alignItems:'center'}}>
-      <Image 
-          source={require('../../../../../../imagenes/print3.png')}
-          style={{width: 300, height: 100, borderRadius:10, marginVertical:'5%', marginHorizontal:'1.5%',}}
-        />
-        </View>
-        <View style={{alignItems:'center'}}>
+      <View style={styles.containerprogressbarinsidefull}>
+      </View>
+      <View style={styles.containerprogressbarinsidefull}>
+      </View>
+      <View style={styles.containerprogressbarinsidefull}>
+      </View>
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
+      </View>
+      <View style={styles.contenedorimagen}>
       <TouchableOpacity  
-          style={styles.button}
+          style={styles.buttonessuprior1}
           onPress={()=> navigation.navigate("Modulo1Leccion2Ejercicio")}>
-          <Text style={styles.text2}>Siguiente</Text>
+          <Text style={styles.textbotones1}>Ejercicio</Text>
+      </TouchableOpacity>
+      <TouchableOpacity  
+          style={styles.buttonessuprior2}
+          onPress={()=> navigation.navigate("Modulo1Leccion2Codigo")}>
+          <Text style={styles.textbotones2}>Código</Text>
       </TouchableOpacity>
       </View>
-      </ScrollView>
+      <Text style={styles.texto}>
+        Escribe un código en donde se muestre en la terminal tu nombre, tu colegio, tu animal y la frase que mas te gusta de tu canción favorita, cada uno en una linea diferente. Recuerda que las frases de otros autores van entre comillas
+        </Text>
     </View>
   )
 }
@@ -59,16 +48,36 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
   },
+  
   containerprogressbar: {
+    flexDirection: "row",
     backgroundColor: '#8CB0B9',
-    width:'90%',
+    width:'87%',
     height:'7%',
     marginTop:"40%",
+    paddingHorizontal:'10%',
     borderRadius:40,
+    alignItems:'center',
+    justifyContent:'space-between',
+  },
+  containerprogressbarinsideempy: {
+    backgroundColor: '#ffffff',
+    width:'10%',
+    height:'50%',
+    //marginTop:"40%",
+    borderRadius:100,
+    borderColor:'#888B8C',
+  },
+  containerprogressbarinsidefull: {
+    backgroundColor: '#1F646D',
+    width:'10%',
+    height:'50%',
+    //marginTop:"40%",
+    borderRadius:100,
   },
   texto: {
-    paddingHorizontal:'5%',
-    marginTop:'5%',
+    paddingHorizontal:'8%',
+    marginTop:'20%',
     textAlign:"center",
     fontSize:20, 
     fontWeight:'400', 
@@ -82,10 +91,42 @@ const styles = StyleSheet.create({
     fontWeight:'700', 
     color:'#085454',
   },
+  textbotones1: {
+    fontSize: 20,
+    color: '#292C31',
+    fontWeight: '700'
+  },
+  textbotones2: {
+    fontSize: 20,
+    color: '#FFFFFF',
+    fontWeight: '700'
+  },
   text2: {
     fontSize: 25,
     color: '#FFFFFF',
     fontWeight: '700'
+  },
+  buttonessuprior1:{
+    width:150,
+    height:50,
+    borderRadius:10,
+    backgroundColor:"#FFFFFF",
+    alignItems:'center',
+    justifyContent: 'center',
+    //marginTop:"5%",
+    //marginBottom:'5%',
+    margin:'5%',
+  },
+  buttonessuprior2:{
+    width:150,
+    height:50,
+    borderRadius:10,
+    backgroundColor:"#292C31",
+    alignItems:'center',
+    justifyContent: 'center',
+    //marginTop:"5%",
+    //marginBottom:'5%',
+    margin:'5%',
   },
   button:{
     width:150,
@@ -96,6 +137,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop:"5%",
     marginBottom:'5%',
+  },
+  contenedorimagen:{
+    //marginTop:'5%',
+    flexDirection: "row",
+    alignItems:'center',
+    justifyContent:'center',
+    width:'90%',
+    height:'15%',
   },
 });
 export default InicioScreen2Ejercicio

@@ -8,11 +8,23 @@ const L2InicioScreen1Explicacion = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerprogressbar}>
+      <View style={styles.containerprogressbarinsidefull}>
       </View>
-        <Image 
-          source={require('../../../../../../imagenes/Leccion1.1.jpg')}
-          style={{width: '80%', height: '30%', borderRadius:8, marginVertical:'5%'}}
-        />
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
+      <View style={styles.containerprogressbarinsideempy}>
+      </View>
+      </View>
+      <View style={{marginVertical:"10%", width:"90%", height:"25%",}}>
+      <WebView
+      source={{html: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Jy5-i48deM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}} />
+    </View>
       <Text style={styles.texto}>En cualquier introducción a un nuevo lenguaje de programación, no puede faltar el famoso Hola Mundo. Se trata del primer programa por el que se empieza, que consiste en programar una aplicación que muestra por pantalla ese texto. para esto se usa Print{"()"}</Text>
       <TouchableOpacity  
           style={styles.button}
@@ -36,11 +48,30 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   containerprogressbar: {
+    flexDirection: "row",
     backgroundColor: '#8CB0B9',
-    width:'90%',
+    width:'87%',
     height:'7%',
     marginTop:"40%",
+    paddingHorizontal:'10%',
     borderRadius:40,
+    alignItems:'center',
+    justifyContent:'space-between',
+  },
+  containerprogressbarinsideempy: {
+    backgroundColor: '#ffffff',
+    width:'10%',
+    height:'50%',
+    //marginTop:"40%",
+    borderRadius:100,
+    borderColor:'#888B8C',
+  },
+  containerprogressbarinsidefull: {
+    backgroundColor: '#1F646D',
+    width:'10%',
+    height:'50%',
+    //marginTop:"40%",
+    borderRadius:100,
   },
   texto: {
     paddingHorizontal:'5%',

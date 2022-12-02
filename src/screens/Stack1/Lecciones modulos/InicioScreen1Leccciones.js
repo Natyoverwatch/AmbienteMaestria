@@ -10,7 +10,7 @@ const persons = [
   sentido: "right",
   colorfont:"#ffffff",
   ruta:"Modulo1Leccion1Explicacion",
-  lecciontext:"Lección No 1. "+"Primeros pasos",
+  lecciontext:"Lección No 1.   "+"Zen de Python",
   imageleccion:require("../../../../imagenes/imagenL1.1.png"),
   image: require("../../../../imagenes/numL1.png")
   },

@@ -271,7 +271,7 @@ export const StackScreen1Inicio = () => {
                 name="Modulo1Leccion2Codigo" 
                 component={InicioScreen3Codigo}
                 options={{
-                    title:"Lecciones",
+                    title:"Código",
                     headerTitleStyle: {
                       fontWeight: 'bold',
                       color:'#ffffff',
@@ -311,7 +311,7 @@ export const StackScreen1Inicio = () => {
                 name="Modulo1Leccion2Siguiente" 
                 component={InicioScreen5Siguiente}
                 options={{
-                    title:"Lecciones",
+                    title:"Sesión superada",
                     headerTitleStyle: {
                       fontWeight: 'bold',
                       color:'#ffffff',
